@@ -1,1048 +1,783 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>David Banga Studio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
-<style>
-/* Layout: a dark viewfinder. Full-bleed hero of scattered frames with depth-of-field,
-   then an editorial contact-sheet flow: index of series → masonry → bio → services → books → contact. */
-:root{
-  color-scheme: dark;
-  --bg:#000000;
-  --bg-2:#0d0b09;
-  --bg-3:#171411;
-  --paper:#f5f2ec;
-  --mute:#a3a3a3;
-  --mute-2:#77716a;
-  --line:rgba(245,242,236,.14);
-  --line-2:rgba(245,242,236,.28);
-  --accent:#ff8500;
-  --accent-ink:#000000;
-  --shade:rgba(0,0,0,.62);
+<!doctype html>
+<html>
 
-  --f-display:"Albert Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --f-serif:"Newsreader","Iowan Old Style","Times New Roman",Georgia,serif;
-  --f-mono:"DM Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+<head>
+  <meta charset=utf8>
+  <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>David Banga Studio</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js'); document.documentElement.lang = 'fr';</script>
+</head>
 
-  --fs-label:11px;
-  --fs-sm:14px;
-  --fs-base:17px;
-  --fs-lead:clamp(20px,2.1vw,28px);
-  --fs-h3:clamp(22px,2.3vw,30px);
-  --fs-h2:clamp(46px,7.6vw,118px);
-  --fs-hero:clamp(92px,20.5vw,330px);
-
-  --side:clamp(16px,4vw,56px);
-  --gut-l:max(var(--side),env(safe-area-inset-left,0px));
-  --gut-r:max(var(--side),env(safe-area-inset-right,0px));
-  --ease:cubic-bezier(.7,0,.2,1);
-  --ease-out:cubic-bezier(.16,1,.3,1);
-}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--paper);font-family:var(--f-display);font-size:var(--fs-base);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
-::selection{background:var(--accent);color:var(--accent-ink)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1480px;margin-inline:auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
-.mono{font-family:var(--f-mono);font-size:var(--fs-label);letter-spacing:.16em;text-transform:uppercase;font-weight:400}
-.serif-i{font-family:var(--f-serif);font-style:italic;font-weight:300;letter-spacing:-.01em}
-.accent{color:var(--accent)}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* grain */
-.grain{position:fixed;inset:-50%;z-index:80;pointer-events:none;opacity:.07;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  animation:grain 1.2s steps(6) infinite}
-@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
-
-/* viewfinder corners utility */
-.vf,.g-open::after,.pf::after{--c:var(--accent);--l:18px;--t:2px;
-  background:
-   linear-gradient(var(--c),var(--c)) top left/var(--l) var(--t) no-repeat,
-   linear-gradient(var(--c),var(--c)) top left/var(--t) var(--l) no-repeat,
-   linear-gradient(var(--c),var(--c)) top right/var(--l) var(--t) no-repeat,
-   linear-gradient(var(--c),var(--c)) top right/var(--t) var(--l) no-repeat,
-   linear-gradient(var(--c),var(--c)) bottom left/var(--l) var(--t) no-repeat,
-   linear-gradient(var(--c),var(--c)) bottom left/var(--t) var(--l) no-repeat,
-   linear-gradient(var(--c),var(--c)) bottom right/var(--l) var(--t) no-repeat,
-   linear-gradient(var(--c),var(--c)) bottom right/var(--t) var(--l) no-repeat}
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:.7em;min-height:48px;padding:0 22px;border-radius:999px;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line-2);transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease-out)}
-.btn:hover{border-color:var(--paper)}
-.btn-accent{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.btn-accent:hover{background:var(--paper);border-color:var(--paper)}
-.btn .arr{transition:transform .4s var(--ease-out)}
-.btn:hover .arr{transform:translateX(4px)}
-
-/* ───────── loader ───────── */
-.loader{display:none}
-.js .loader{display:flex;position:fixed;inset:0;z-index:100;background:var(--bg);flex-direction:column;justify-content:space-between;
-  padding:calc(24px + env(safe-area-inset-top,0px)) var(--gut-r) calc(24px + env(safe-area-inset-bottom,0px)) var(--gut-l);
-  animation:loaderFailsafe 0s 5s forwards}
-.loader.out{transition:clip-path 1s var(--ease);clip-path:inset(0 0 100% 0)}
-.loader.gone{display:none!important}
-@keyframes loaderFailsafe{to{visibility:hidden;pointer-events:none}}
-.loader-top{display:flex;justify-content:space-between;color:var(--mute)}
-.loader-mid{display:grid;place-items:center}
-.loader-mid img{width:clamp(72px,10vw,120px);height:auto;animation:breathe 1.6s ease-in-out infinite alternate}
-@keyframes breathe{from{opacity:.55}to{opacity:1}}
-.loader-bot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
-.loader-count{font-family:var(--f-display);font-weight:200;font-size:clamp(72px,16vw,220px);line-height:.8;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-.loader-bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
-
-/* ───────── header ───────── */
-.head{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .5s var(--ease),background .4s}
-.head.scrolled{background:rgba(0,0,0,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.head.hide{transform:translateY(-110%)}
-.head-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
-.brand img{height:26px;width:auto}
-.nav{display:flex;gap:clamp(18px,2.4vw,36px)}
-.nav a{position:relative;color:var(--mute);transition:color .3s}
-.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
-.nav a:hover,.nav a.on{color:var(--paper)}
-.nav a:hover::after,.nav a.on::after{transform:scaleX(1);transform-origin:left}
-.head-cta{min-height:40px;padding:0 18px}
-.menu-btn{display:none;min-height:44px;padding:0 4px}
-.menu-btn .bars{display:inline-block;width:22px;height:8px;position:relative;margin-left:10px;vertical-align:middle}
-.menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .4s var(--ease)}
-.menu-btn .bars::before{top:0}.menu-btn .bars::after{bottom:0}
-.menu-btn[aria-expanded="true"] .bars::before{transform:translateY(3.25px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .bars::after{transform:translateY(-3.25px) rotate(-45deg)}
-.mnav{position:fixed;inset:0;z-index:45;background:var(--bg);display:flex;flex-direction:column;justify-content:flex-end;gap:32px;
-  padding:calc(100px + env(safe-area-inset-top,0px)) var(--gut-r) calc(32px + env(safe-area-inset-bottom,0px)) var(--gut-l);
-  clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease);visibility:hidden}
-.mnav.open{clip-path:inset(0 0 0 0);visibility:visible}
-.mnav ol{list-style:none;margin:0;padding:0;display:grid;gap:4px}
-.mnav ol a{display:flex;align-items:baseline;gap:14px;font-weight:800;font-size:clamp(40px,11vw,64px);letter-spacing:-.04em;line-height:1.05}
-.mnav ol a small{font-family:var(--f-mono);font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--accent)}
-.mnav-foot{display:flex;flex-wrap:wrap;gap:12px 24px;color:var(--mute)}
-
-/* ───────── hero ───────── */
-.hero{position:relative;min-height:max(640px,min(100svh,1000px));overflow:hidden;isolation:isolate;display:grid;align-items:center}
-.field{position:absolute;inset:0;z-index:0}
-.pf{position:absolute;width:var(--w);aspect-ratio:var(--ar);top:var(--t,auto);left:var(--l,auto);right:var(--r,auto);bottom:var(--b,auto);will-change:transform;cursor:zoom-in}
-.pf-in{position:absolute;inset:0;overflow:hidden;background:var(--ph,#111)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:blur(var(--blur,0px)) brightness(var(--br,.6)) saturate(.95);transform:scale(1.04);transition:filter .7s var(--ease-out),transform 1.2s var(--ease-out)}
-.pf:hover img{filter:blur(0) brightness(1) saturate(1);transform:scale(1)}
-.pf::after{content:"";position:absolute;inset:-8px;opacity:0;transition:opacity .4s,inset .5s var(--ease-out);pointer-events:none}
-.pf:hover::after{opacity:1;inset:-12px}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(60% 52% at 50% 52%,rgba(0,0,0,.78) 0%,rgba(0,0,0,.45) 55%,rgba(0,0,0,0) 100%)}
-.hero-frame{position:absolute;z-index:2;pointer-events:none;inset:calc(92px + env(safe-area-inset-top,0px)) var(--gut-r) 22px var(--gut-l);--c:rgba(245,242,236,.55);--l:26px;--t:1px}
-.hero-content{position:relative;z-index:3;width:100%;padding-top:120px;padding-bottom:120px;pointer-events:none}
-.hero-content a,.hero-content button{pointer-events:auto}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;color:var(--paper);justify-content:center;margin-bottom:clamp(10px,2vw,22px)}
-.rec{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,133,0,.2);animation:rec 1.6s ease-in-out infinite}
-@keyframes rec{50%{opacity:.25}}
-.hero-name{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.8;letter-spacing:-.055em;font-size:var(--fs-hero)}
-.hn-david{font-weight:150;font-size:.5em;align-self:center;transform:translateX(-.42em);letter-spacing:-.03em;margin-bottom:.02em}
-.hn-banga{font-weight:800;color:var(--accent);padding-bottom:.2em;margin-bottom:-.14em}
-.hn-line{display:block;overflow:hidden;padding-inline:.04em}
-.ch{display:inline-block;will-change:transform}
-.js-anim .hero-name .ch{transform:translateY(105%)}
-.hero-ready .hero-name .ch{transform:none;transition:transform 1.25s var(--ease-out);transition-delay:calc(var(--i)*55ms + 120ms)}
-.hero-sub{margin:clamp(18px,2.6vw,34px) auto 0;max-width:34ch;text-align:center;font-size:var(--fs-lead);line-height:1.35;color:var(--paper);text-wrap:balance}
-.hero-sub em{font-family:var(--f-serif);font-weight:300}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:clamp(22px,3vw,36px)}
-.hero-hud{position:absolute;z-index:3;left:0;right:0;bottom:34px;display:flex;justify-content:space-between;gap:16px;color:var(--mute);pointer-events:none}
-.hero-hud .scroll{display:inline-flex;align-items:center;gap:10px;color:var(--paper)}
-.hero-hud .scroll i{display:block;width:1px;height:28px;background:var(--line-2);position:relative;overflow:hidden}
-.hero-hud .scroll i::after{content:"";position:absolute;left:0;top:-100%;width:1px;height:100%;background:var(--accent);animation:drip 1.8s var(--ease) infinite}
-@keyframes drip{to{top:100%}}
-
-/* ───────── marquee ───────── */
-.marquee{border-block:1px solid var(--line);overflow:hidden;padding-block:clamp(16px,2.2vw,26px);background:var(--bg)}
-.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite}
-.marquee:hover .mq-track{animation-play-state:paused}
-.mq-group{display:flex;align-items:center;gap:clamp(22px,3vw,44px);padding-right:clamp(22px,3vw,44px)}
-.mq-group span{font-size:clamp(38px,6.4vw,92px);line-height:1;white-space:nowrap;letter-spacing:-.04em;font-weight:800}
-.mq-group span:nth-child(4n+3){font-family:var(--f-serif);font-style:italic;font-weight:300;color:var(--accent);letter-spacing:-.02em}
-.mq-group .mk{width:clamp(16px,1.8vw,24px);height:clamp(16px,1.8vw,24px);border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);flex:none}
-@keyframes mq{to{transform:translateX(-50%)}}
-
-/* ───────── sections ───────── */
-.sec{padding-block:clamp(80px,10vw,150px);position:relative}
-.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);align-items:end;gap:24px 48px;margin-bottom:clamp(44px,6vw,84px)}
-.eyebrow{display:flex;align-items:center;gap:12px;color:var(--accent);margin-bottom:22px}
-.eyebrow::before{content:"";width:10px;height:10px;border-left:2px solid currentColor;border-top:2px solid currentColor}
-.h2{margin:0;font-size:var(--fs-h2);line-height:.9;letter-spacing:-.05em;font-weight:800;text-wrap:balance}
-.h2 .serif-i{letter-spacing:-.03em}
-.sec-lead{max-width:44ch;color:var(--mute);font-size:var(--fs-base);margin:0}
-
-/* index of series */
-.series{list-style:none;margin:0 0 clamp(70px,9vw,130px);padding:0;border-top:1px solid var(--line)}
-.series li{border-bottom:1px solid var(--line)}
-.s-row{position:relative;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:20px 40px;padding:clamp(20px,2.4vw,30px) 0;text-align:left;overflow:hidden;isolation:isolate}
-.s-row::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--accent);transform:scaleY(0);transform-origin:bottom;transition:transform .55s var(--ease)}
-.s-name{font-size:clamp(30px,4.8vw,72px);font-weight:700;letter-spacing:-.045em;line-height:1;transition:transform .55s var(--ease),color .3s}
-.s-desc{color:var(--mute);max-width:30ch;font-size:var(--fs-sm);line-height:1.45;transition:color .3s}
-.s-count{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;color:var(--mute);font-variant-numeric:tabular-nums;transition:color .3s;display:flex;align-items:center;gap:14px}
-.s-count .arr{display:inline-block;transition:transform .5s var(--ease)}
-.s-thumbs{display:none}
-@media (hover:hover){
-  .s-row:hover::before,.s-row:focus-visible::before{transform:scaleY(1)}
-  .s-row:hover .s-name,.s-row:focus-visible .s-name{transform:translateX(clamp(10px,1.6vw,24px));color:var(--accent-ink)}
-  .s-row:hover .s-desc,.s-row:hover .s-count,.s-row:focus-visible .s-desc,.s-row:focus-visible .s-count{color:var(--accent-ink)}
-  .s-row:hover .arr{transform:translateX(6px) rotate(-45deg)}
-}
-.peek{position:fixed;left:0;top:0;z-index:40;width:clamp(200px,17vw,280px);aspect-ratio:4/5;pointer-events:none;opacity:0;transform:translate3d(-50%,-50%,0) scale(.85);transition:opacity .35s,scale .35s;overflow:hidden;background:var(--bg-3)}
-.peek.on{opacity:1}
-.peek img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-
-/* filters */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;position:sticky;top:calc(84px + env(safe-area-inset-top,0px));z-index:5;padding-block:10px}
-.chip{min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);background:rgba(0,0,0,.66);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);transition:all .3s}
-.chip sup{font-size:9px;color:var(--mute-2);top:0}
-.chip:hover{color:var(--paper);border-color:var(--paper)}
-.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.chip[aria-pressed="true"] sup{color:var(--accent-ink)}
-
-/* gallery */
-.gallery{columns:3;column-gap:clamp(10px,1.4vw,20px)}
-.gallery.masonry{columns:auto;display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));grid-auto-rows:4px;row-gap:0;align-items:start}
-.gallery.masonry .g-item{margin:0}
-.g-item{break-inside:avoid;margin:0 0 clamp(10px,1.4vw,20px);transition:opacity .4s,transform .5s var(--ease-out)}
-.g-item.fading{opacity:0;transform:scale(.97)}
-.g-open{display:block;width:100%;position:relative;overflow:hidden;background:var(--ph,#111);text-align:left;cursor:zoom-in}
-.g-open img{width:100%;height:auto;aspect-ratio:var(--ar);object-fit:cover;transition:transform 1.1s var(--ease-out),filter .6s}
-.g-open::after{content:"";position:absolute;inset:14px;opacity:0;transform:scale(1.06);transition:opacity .4s,transform .6s var(--ease-out);pointer-events:none}
-.g-meta{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:10px;padding:40px 18px 16px;color:var(--paper);background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,0));opacity:0;transform:translateY(10px);transition:opacity .4s,transform .5s var(--ease-out)}
-.g-open:hover img,.g-open:focus-visible img{transform:scale(1.045)}
-.g-open:hover::after,.g-open:focus-visible::after{opacity:1;transform:none}
-.g-open:hover .g-meta,.g-open:focus-visible .g-meta{opacity:1;transform:none}
-.g-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(36px,5vw,64px);padding-top:24px;border-top:1px solid var(--line);color:var(--mute)}
-
-/* ───────── quote ───────── */
-.quote{padding-block:clamp(110px,16vw,240px);text-align:center;overflow:hidden}
-.quote blockquote{margin:0}
-.q-text{font-family:var(--f-serif);font-weight:250;font-style:italic;font-size:clamp(44px,8.6vw,150px);line-height:.98;letter-spacing:-.035em;margin:0 auto;max-width:13ch;text-wrap:balance}
-.q-text .w{display:inline-block;white-space:nowrap}
-.q-text .qc{display:inline-block;will-change:transform}
-.q-text .hl{color:var(--accent)}
-.q-cite{display:block;margin-top:clamp(56px,6vw,84px);color:var(--mute);font-style:normal}
-
-/* ───────── about ───────── */
-.about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,7vw,120px);align-items:start}
-.sheet{background:var(--bg-2);padding:clamp(14px,1.8vw,24px);position:relative;border:1px solid var(--line)}
-.sheet-edge{display:flex;justify-content:space-between;color:var(--accent);font-size:10px;margin-bottom:12px}
-.sheet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1vw,14px) clamp(6px,.8vw,10px)}
-.sheet-grid figure{margin:0}
-.sheet-grid .fr{aspect-ratio:2/3;overflow:hidden;background:var(--bg-3);position:relative}
-.sheet-grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15)}
-.sheet-grid figcaption{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;color:var(--mute-2);margin-top:5px}
-.sheet-grid .sel figcaption{color:var(--accent)}
-.sheet-grid .sel .fr::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px var(--accent)}
-.grease{position:absolute;pointer-events:none;overflow:visible}
-.grease path{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.sheet-note{margin-top:14px;display:flex;justify-content:space-between;color:var(--mute-2);font-size:10px}
-.about-body .h2{margin-bottom:clamp(24px,3vw,40px)}
-.about-lead{font-family:var(--f-serif);font-weight:300;font-size:clamp(24px,2.6vw,36px);line-height:1.22;letter-spacing:-.015em;margin:0 0 28px;text-wrap:pretty}
-.about-lead em{color:var(--accent)}
-.about-body p{max-width:62ch}
-.about-text{display:grid;gap:16px;color:var(--mute)}
-.about-text p{margin:0}
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin:clamp(32px,4vw,52px) 0 0;border-top:1px solid var(--line)}
-.facts div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;gap:4px;min-width:0}
-.facts dt{color:var(--mute-2)}
-.facts dd{margin:0;font-size:var(--fs-base);font-weight:500}
-
-/* ───────── services ───────── */
-.services{background:var(--bg-2);border-block:1px solid var(--line)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.svc{position:relative;padding:clamp(28px,3vw,44px) clamp(22px,2.4vw,36px) clamp(32px,3.4vw,52px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:16px;min-height:300px;transition:background .4s;min-width:0}
-.svc::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
-.svc:hover{background:var(--bg-3)}
-.svc:hover::before{transform:scaleX(1)}
-.svc-ico{width:44px;height:44px;--l:12px;--t:2px;display:grid;place-items:center;color:var(--accent)}
-.svc-ico svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5}
-.svc h3{margin:6px 0 0;font-size:var(--fs-h3);line-height:1.1;letter-spacing:-.03em;font-weight:700}
-.svc p{margin:0;color:var(--mute);font-size:15.5px;line-height:1.55}
-.svc .tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
-.svc .tags span{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--mute)}
-.svc-cta{background:var(--accent);color:var(--accent-ink);justify-content:space-between}
-.svc-cta:hover{background:var(--paper)}
-.svc-cta h3{font-size:clamp(30px,3.4vw,50px);font-weight:800;letter-spacing:-.045em;line-height:.95}
-.svc-cta h3 em{font-family:var(--f-serif);font-weight:300}
-.svc-cta p{color:rgba(0,0,0,.72)}
-.svc-cta .go{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-.svc-cta::before{display:none}
-
-/* ───────── books ───────── */
-.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
-.book{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,3vw,44px);align-items:center;padding:clamp(20px,2.6vw,36px);border:1px solid var(--line);background:var(--bg-2);transition:border-color .4s;min-width:0}
-.book:hover{border-color:var(--line-2)}
-.cover-wrap{perspective:1200px}
-.cover{position:relative;aspect-ratio:3/4;transform:rotateY(-14deg) rotateX(3deg);transform-style:preserve-3d;transition:transform .8s var(--ease-out);box-shadow:24px 30px 50px rgba(0,0,0,.6);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,1.6vw,22px) clamp(14px,1.6vw,22px) clamp(14px,1.6vw,22px) calc(clamp(14px,1.6vw,22px) + 10px);overflow:hidden}
-.cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.12) 60%,rgba(0,0,0,.2))}
-.book:hover .cover{transform:rotateY(-4deg) rotateX(0) translateY(-6px)}
-.cover-a{background:var(--bg-3);color:var(--paper);border:1px solid var(--line)}
-.cover-b{background:var(--accent);color:var(--accent-ink)}
-.cover .c-top{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
-.cover .c-title{font-weight:800;font-size:clamp(24px,2.7vw,40px);line-height:.92;letter-spacing:-.05em}
-.cover .c-title em{display:block;font-family:var(--f-serif);font-weight:300;letter-spacing:-.02em}
-.cover .c-mono{width:clamp(34px,3.4vw,52px);height:auto}
-.cover .c-photo{position:absolute;right:-8%;top:16%;width:62%;aspect-ratio:3/4;object-fit:cover;opacity:.9}
-.cover-a .c-title,.cover-a .c-top,.cover-a .c-bot{position:relative}
-.cover .c-bot{display:flex;justify-content:space-between;align-items:flex-end;gap:8px;font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
-.book-info{display:flex;flex-direction:column;gap:14px;min-width:0}
-.book-info .mono{color:var(--accent)}
-.book-info h3{margin:0;font-size:var(--fs-h3);line-height:1.1;letter-spacing:-.03em;font-weight:700}
-.book-info p{margin:0;color:var(--mute);font-size:15.5px}
-.book-info .btn{align-self:flex-start;margin-top:8px}
-
-/* ───────── contact / footer ───────── */
-.contact{padding-top:clamp(100px,13vw,200px);padding-bottom:calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);position:relative;overflow:hidden}
-.c-big{margin:0;font-size:clamp(64px,15vw,250px);font-weight:800;letter-spacing:-.06em;line-height:.85}
-.c-big em{font-family:var(--f-serif);font-weight:250;letter-spacing:-.04em}
-.c-big .dot{color:var(--accent)}
-.c-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(36px,6vw,96px);margin-top:clamp(40px,6vw,80px);align-items:end}
-.c-line{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-block:18px;border-bottom:1px solid var(--line)}
-.c-line:first-child{border-top:1px solid var(--line)}
-.c-line .mono{width:100%;color:var(--mute-2)}
-.c-value{font-size:clamp(22px,3vw,40px);font-weight:500;letter-spacing:-.03em;line-height:1.15;user-select:all;overflow-wrap:anywhere;transition:color .3s;min-width:0}
-a.c-value:hover{color:var(--accent)}
-.copy{min-height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);transition:all .3s}
-.copy:hover{color:var(--paper);border-color:var(--paper)}
-.copy.ok{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.barrels{display:flex;flex-wrap:wrap;gap:14px 26px;margin-bottom:28px}
-.barrel{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;min-height:44px}
-.barrel .bk{color:var(--mute-2);transition:color .3s,transform .5s var(--ease)}
-.barrel .word{display:inline-flex;overflow:hidden;line-height:1.3;height:1.3em}
-.barrel .bc{display:inline-flex;flex-direction:column}
-.barrel .bc span{display:block;transition:transform .55s var(--ease);transition-delay:calc(var(--i)*28ms)}
-.barrel .bc span+span{color:var(--accent)}
-.barrel:hover .bc span,.barrel:focus-visible .bc span{transform:translateY(-100%)}
-.barrel:hover .bk,.barrel:focus-visible .bk{color:var(--accent)}
-.barrel:hover .bk.l{transform:translateX(-4px)}
-.barrel:hover .bk.r{transform:translateX(4px)}
-.c-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;color:var(--mute)}
-.c-meta div{display:grid;gap:6px;min-width:0}
-.c-meta dt{color:var(--mute-2)}
-.c-meta dd{margin:0;color:var(--paper);font-size:15.5px;font-variant-numeric:tabular-nums}
-.sign{margin-top:clamp(70px,10vw,140px)}
-.sign img{width:100%;height:auto;opacity:.95}
-.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);color:var(--mute-2)}
-.legal a:hover{color:var(--accent)}
-
-/* whatsapp fab */
-.fab{position:fixed;z-index:40;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .5s var(--ease),background .3s}
-.fab:hover{background:var(--paper)}
-.fab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7}
-.fab.away{transform:translateY(calc(100% + 40px))}
-
-/* ───────── lightbox ───────── */
-.lb{position:fixed;inset:0;z-index:90;background:var(--bg);display:grid;grid-template-rows:auto minmax(0,1fr) auto;
-  padding:calc(14px + env(safe-area-inset-top,0px)) var(--gut-r) calc(14px + env(safe-area-inset-bottom,0px)) var(--gut-l);opacity:0;transition:opacity .35s}
-.lb.open{opacity:1}
-.lb-top,.lb-bot{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;color:var(--mute)}
-.lb-count{color:var(--paper);font-variant-numeric:tabular-nums}
-.lb-close{min-height:44px;padding:0 6px;color:var(--paper);display:inline-flex;align-items:center;gap:10px}
-.lb-close:hover{color:var(--accent)}
-.lb-stage{position:relative;margin:0;display:grid;place-items:center;min-height:0;touch-action:pan-y}
-.lb-img{position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:opacity .3s,transform .45s var(--ease-out)}
-.lb-img.swap{opacity:0;transform:scale(.985)}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;background:rgba(0,0,0,.4);transition:all .3s;z-index:2}
-.lb-nav:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.lb-prev{left:0}.lb-next{right:0}
-.lb-cap{color:var(--paper);font-size:15px;max-width:60ch}
-.lb-exif{color:var(--mute-2);text-align:right}
-
-/* ───────── cursor ───────── */
-.cursor{display:none}
-.has-cursor .cursor{display:block;position:fixed;left:0;top:0;z-index:95;pointer-events:none;opacity:0;transition:opacity .3s}
-.has-cursor .cursor.live{opacity:1}
-.cursor-dot{position:fixed;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--accent)}
-.cursor-ring{position:fixed;left:0;top:0;width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid rgba(245,242,236,.45);border-radius:50%;display:grid;place-items:center;transition:width .35s var(--ease-out),height .35s var(--ease-out),margin .35s var(--ease-out),background .3s,border-color .3s}
-.cursor-label{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);opacity:0;transition:opacity .2s}
-.cursor.big .cursor-ring{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--accent);border-color:var(--accent)}
-.cursor.big .cursor-label{opacity:1}
-.cursor.big .cursor-dot{opacity:0}
-.cursor.link .cursor-ring{width:54px;height:54px;margin:-27px 0 0 -27px;border-color:var(--accent)}
-
-/* scroll-driven reveal (transform only: content stays readable at rest) */
-@supports (animation-timeline: view()){
-  @media (prefers-reduced-motion: no-preference){
-    .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
-    @keyframes rv{from{transform:translateY(28px)}to{transform:none}}
-  }
-}
-
-/* ───────── responsive ───────── */
-@media (max-width:1080px){
-  .nav{display:none}
-  .menu-btn{display:inline-flex;align-items:center}
-  .gallery{columns:2}
-  .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .books{grid-template-columns:minmax(0,1fr)}
-  .about-grid{grid-template-columns:minmax(0,1fr)}
-  .sheet{max-width:620px}
-  .c-grid{grid-template-columns:minmax(0,1fr)}
-  .s-desc{display:none}
-}
-@media (max-width:720px){
-  .lb-img{bottom:56px}
-  .head-in{height:66px}
-  .brand img{height:21px}
-  .head-cta{display:none}
-  .hero{min-height:max(600px,100svh)}
-  .hero-frame{inset:calc(78px + env(safe-area-inset-top,0px)) var(--gut-r) 14px var(--gut-l);--l:18px}
-  .pf.m-hide{display:none}
-  .pf{width:var(--mw,var(--w));top:var(--mt,var(--t,auto));left:var(--ml,var(--l,auto));right:var(--mr,var(--r,auto));bottom:var(--mb,var(--b,auto))}
-  .hn-david{transform:translateX(-.3em)}
-  .hero-hud{bottom:22px}
-    .sec-head{grid-template-columns:minmax(0,1fr)}
-  .s-row{grid-template-columns:minmax(0,1fr) auto;gap:14px}
-  .s-thumbs{display:flex;grid-column:1 / -1;gap:6px;margin-top:4px}
-  .s-thumbs img{width:56px;height:70px;object-fit:cover}
-  .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--gut-l)) calc(-1 * var(--gut-r));padding-inline:var(--gut-l) var(--gut-r)}
-  .filters::-webkit-scrollbar{display:none}
-  .chip{flex:none}
-  .gallery{column-gap:8px}
-  .g-item{margin-bottom:8px}
-  .g-meta{display:none}
-  .svc-grid{grid-template-columns:minmax(0,1fr)}
-  .svc{min-height:0}
-  .book{grid-template-columns:minmax(0,1fr)}
-  .cover-wrap{max-width:260px}
-  .facts{grid-template-columns:minmax(0,1fr)}
-  .c-meta{grid-template-columns:minmax(0,1fr)}
-  .lb-nav{width:46px;height:46px;top:auto;bottom:-6px;transform:none}
-  .lb-stage{padding-bottom:56px}
-  .lb-exif{display:none}
-  .fab{height:50px;padding:0 16px 0 14px}
-  .fab .fab-txt{display:none}
-  .fab{width:54px;padding:0;justify-content:center}
-}
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-  .grain{display:none}
-}
-</style>
-<script>document.documentElement.classList.add('js');document.documentElement.lang='fr';</script>
-<div class="grain" aria-hidden="true"></div>
-
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-top mono"><span>David Banga Studio</span><span>Dakar — Sénégal</span></div>
-  <div class="loader-mid"><img src="assets/logo/monogram-dark.png" alt="" width="458" height="338"></div>
-  <div class="loader-bot">
-    <span class="mono" style="color:var(--mute)">Développement<br>des images</span>
-    <span class="loader-count" id="loaderCount">000</span>
-  </div>
-  <span class="loader-bar" id="loaderBar"></span>
-</div>
-
-<header class="head" id="head">
-  <div class="wrap head-in">
-    <a class="brand" href="#accueil" aria-label="David Banga Studio, retour à l'accueil"><img src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405" height="310"></a>
-    <nav class="nav mono" aria-label="Navigation principale">
-      <a href="#realisations">Réalisations</a>
-      <a href="#a-propos">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#portfolios">Portfolios PDF</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn-accent head-cta" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener">Réserver <span class="arr">→</span></a>
-    <button class="menu-btn mono" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu<span class="bars" aria-hidden="true"></span></button>
-  </div>
-</header>
-
-<nav class="mnav" id="mnav" aria-label="Menu mobile">
-  <ol>
-    <li><a href="#realisations"><small>01</small>Réalisations</a></li>
-    <li><a href="#a-propos"><small>02</small>À propos</a></li>
-    <li><a href="#services"><small>03</small>Services</a></li>
-    <li><a href="#portfolios"><small>04</small>Portfolios</a></li>
-    <li><a href="#contact"><small>05</small>Contact</a></li>
-  </ol>
-  <div class="mnav-foot mono">
-    <a href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener">WhatsApp</a>
-    <a href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener">Behance</a>
-  </div>
-</nav>
-
-<main>
-<!-- ═════════ HERO ═════════ -->
-<section class="hero" id="accueil" aria-label="Introduction">
-  <div class="field" id="field">
-    <div class="pf" data-depth="0.06" data-slug="euromed-rge2411" style="--w:17%;--t:7%;--l:-2%;--ar:675/900;--blur:1.6px;--br:0.5;--mw:34%;--mt:10%;--ml:-6%"><div class="pf-in" style="--ph:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" width="675" height="900" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf m-hide" data-depth="0.15" data-slug="m0a0598" style="--w:10%;--t:13%;--l:22%;--ar:675/900;--blur:0.6px;--br:0.55"><div class="pf-in" style="--ph:#403d3a"><img src="assets/photos/m0a0598-sm.webp" alt="" width="675" height="900" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf" data-depth="0.07" data-slug="baraka-gate1909" style="--w:22%;--t:9%;--r:-4%;--ar:900/720;--blur:1.4px;--br:0.5;--mw:46%;--mt:12%;--mr:-12%"><div class="pf-in" style="--ph:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" width="900" height="720" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf" data-depth="0.2" data-slug="daniel-banam0543" style="--w:16%;--t:50%;--l:4%;--ar:900/600;--blur:0px;--br:0.62;--mw:40%;--mt:auto;--mb:8%;--ml:-10%"><div class="pf-in" style="--ph:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" width="900" height="600" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf m-hide" data-depth="0.1" data-slug="ben-1814" style="--w:12%;--b:-10%;--l:19%;--ar:720/900;--blur:1px;--br:0.5"><div class="pf-in" style="--ph:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" width="720" height="900" decoding="async"></div></div>
-    <div class="pf" data-depth="0.17" data-slug="2n9a0017" style="--w:10%;--b:-14%;--l:46%;--ar:600/900;--blur:0.4px;--br:0.55;--mw:26%;--mb:-5%;--ml:37%"><div class="pf-in" style="--ph:#725057"><img src="assets/photos/2n9a0017-sm.webp" alt="" width="600" height="900" decoding="async"></div></div>
-    <div class="pf" data-depth="0.22" data-slug="wil02129" style="--w:12%;--t:44%;--r:5%;--ar:675/900;--blur:0px;--br:0.62;--mw:30%;--mt:auto;--mb:9%;--mr:-7%"><div class="pf-in" style="--ph:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" width="675" height="900" decoding="async"></div></div>
-    <div class="pf m-hide" data-depth="0.12" data-slug="mandeleine-abou1100" style="--w:11%;--b:-8%;--r:22%;--ar:720/900;--blur:1px;--br:0.5"><div class="pf-in" style="--ph:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt="" width="720" height="900" decoding="async"></div></div>
-    <div class="pf m-hide" data-depth="0.18" data-slug="256a8876-david-banga-studio" style="--w:8%;--t:5%;--l:61%;--ar:624/900;--blur:0.3px;--br:0.55"><div class="pf-in" style="--ph:#383034"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" width="624" height="900" decoding="async"></div></div>
-  </div>
-  <div class="hero-frame vf" aria-hidden="true"></div>
-  <div class="hero-content wrap">
-    <p class="hero-eyebrow mono"><span class="rec" aria-hidden="true"></span>Photographe · Infographe</p>
-    <h1 class="hero-name" aria-label="David Banga">
-      <span class="hn-line hn-david" aria-hidden="true">David</span>
-      <span class="hn-line hn-banga" aria-hidden="true">Banga</span>
-    </h1>
-    <p class="hero-sub">Portraits, séances studio et reportages. <em>Ivoirien, basé à Dakar.</em></p>
-    <div class="hero-ctas">
-      <a class="btn btn-accent" href="#realisations" data-cursor="link">Voir les réalisations <span class="arr">↓</span></a>
-      <a class="btn" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">Réserver une séance <span class="arr">→</span></a>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-top mono"><span>David Banga Studio</span><span>Dakar — Sénégal</span></div>
+    <div class="loader-mid"><img src="assets/logo/monogram-dark.png" alt="" width="458" height="338"></div>
+    <div class="loader-bot">
+      <span class="mono" style="color:var(--mute)">Développement<br>des images</span>
+      <span class="loader-count" id="loaderCount">000</span>
     </div>
+    <span class="loader-bar" id="loaderBar"></span>
   </div>
-  <div class="hero-hud wrap mono" aria-hidden="true">
-    <span class="coords">14°41′ N — 17°26′ O · Dakar</span>
-    <span class="scroll">Défiler <i></i></span>
-  </div>
-</section>
 
-<!-- ═════════ MARQUEE ═════════ -->
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track">
-    <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
-    <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
-  </div>
-</div>
+  <header class="head" id="head">
+    <div class="wrap head-in">
+      <a class="brand" href="#accueil" aria-label="David Banga Studio, retour à l'accueil"><img
+          src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405" height="310"></a>
+      <nav class="nav mono" aria-label="Navigation principale">
+        <a href="#realisations">Réalisations</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#portfolios">Portfolios PDF</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-accent head-cta"
+        href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+        target="_blank" rel="noopener">Réserver <span class="arr">→</span></a>
+      <button class="menu-btn mono" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu<span class="bars"
+          aria-hidden="true"></span></button>
+    </div>
+  </header>
 
-<!-- ═════════ RÉALISATIONS ═════════ -->
-<section class="sec" id="realisations" aria-labelledby="t-real">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Réalisations — 30 images</p>
-        <h2 class="h2" id="t-real">Des visages,<br><span class="serif-i accent">des histoires.</span></h2>
+  <nav class="mnav" id="mnav" aria-label="Menu mobile">
+    <ol>
+      <li><a href="#realisations"><small>01</small>Réalisations</a></li>
+      <li><a href="#a-propos"><small>02</small>À propos</a></li>
+      <li><a href="#services"><small>03</small>Services</a></li>
+      <li><a href="#portfolios"><small>04</small>Portfolios</a></li>
+      <li><a href="#contact"><small>05</small>Contact</a></li>
+    </ol>
+    <div class="mnav-foot mono">
+      <a href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+        target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener">Behance</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═════════ HERO ═════════ -->
+    <section class="hero" id="accueil" aria-label="Introduction">
+      <div class="field" id="field">
+        <div class="pf" data-depth="0.06" data-slug="euromed-rge2411"
+          style="--w:17%;--t:7%;--l:-2%;--ar:675/900;--blur:1.6px;--br:0.5;--mw:34%;--mt:10%;--ml:-6%">
+          <div class="pf-in" style="--ph:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" width="675"
+              height="900" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.15" data-slug="m0a0598"
+          style="--w:10%;--t:13%;--l:22%;--ar:675/900;--blur:0.6px;--br:0.55">
+          <div class="pf-in" style="--ph:#403d3a"><img src="assets/photos/m0a0598-sm.webp" alt="" width="675"
+              height="900" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf" data-depth="0.07" data-slug="baraka-gate1909"
+          style="--w:22%;--t:9%;--r:-4%;--ar:900/720;--blur:1.4px;--br:0.5;--mw:46%;--mt:12%;--mr:-12%">
+          <div class="pf-in" style="--ph:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" width="900"
+              height="720" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf" data-depth="0.2" data-slug="daniel-banam0543"
+          style="--w:16%;--t:50%;--l:4%;--ar:900/600;--blur:0px;--br:0.62;--mw:40%;--mt:auto;--mb:8%;--ml:-10%">
+          <div class="pf-in" style="--ph:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" width="900"
+              height="600" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.1" data-slug="ben-1814"
+          style="--w:12%;--b:-10%;--l:19%;--ar:720/900;--blur:1px;--br:0.5">
+          <div class="pf-in" style="--ph:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" width="720"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf" data-depth="0.17" data-slug="2n9a0017"
+          style="--w:10%;--b:-14%;--l:46%;--ar:600/900;--blur:0.4px;--br:0.55;--mw:26%;--mb:-5%;--ml:37%">
+          <div class="pf-in" style="--ph:#725057"><img src="assets/photos/2n9a0017-sm.webp" alt="" width="600"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf" data-depth="0.22" data-slug="wil02129"
+          style="--w:12%;--t:44%;--r:5%;--ar:675/900;--blur:0px;--br:0.62;--mw:30%;--mt:auto;--mb:9%;--mr:-7%">
+          <div class="pf-in" style="--ph:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" width="675"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.12" data-slug="mandeleine-abou1100"
+          style="--w:11%;--b:-8%;--r:22%;--ar:720/900;--blur:1px;--br:0.5">
+          <div class="pf-in" style="--ph:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt=""
+              width="720" height="900" decoding="async"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.18" data-slug="256a8876-david-banga-studio"
+          style="--w:8%;--t:5%;--l:61%;--ar:624/900;--blur:0.3px;--br:0.55">
+          <div class="pf-in" style="--ph:#383034"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt=""
+              width="624" height="900" decoding="async"></div>
+        </div>
       </div>
-      <p class="sec-lead">Une sélection de portraits, de séances studio et de reportages. Choisissez une série pour filtrer la galerie, puis touchez une image pour l'agrandir.</p>
-    </div>
-
-    <ul class="series" id="series">
-      <li><button class="s-row" type="button" data-filter="studio" aria-controls="gallery"><span class="s-name">Portraits studio</span><span class="s-desc">Lumière maîtrisée, fonds unis, personnalité au premier plan.</span><span class="s-count">08 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" loading="lazy" width="624" height="900"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" loading="lazy" width="900" height="600"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/miss-mister-bde0532-sm.webp" alt="" loading="lazy" width="720" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="corporate" aria-controls="gallery"><span class="s-name">Portraits professionnels</span><span class="s-desc">Dirigeants, cadres et entrepreneurs, pour une image crédible.</span><span class="s-count">05 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/2n9a0258-sm.webp" alt="" loading="lazy" width="900" height="720"><img src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp" alt="" loading="lazy" width="720" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="mode" aria-controls="gallery"><span class="s-name">Mode &amp; lifestyle</span><span class="s-desc">Séances créatives, stylisme et attitude, en studio ou en extérieur.</span><span class="s-count">06 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/ben-1910-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/2n9a8702-sm.webp" alt="" loading="lazy" width="600" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="famille" aria-controls="gallery"><span class="s-name">Couples &amp; famille</span><span class="s-desc">Couples, familles et grossesse : les liens qui comptent.</span><span class="s-count">05 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" loading="lazy" width="900" height="720"><img src="assets/photos/linda0930-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/esaie-lind0846-sm.webp" alt="" loading="lazy" width="600" height="900"><img src="assets/photos/2n9a9317-sm.webp" alt="" loading="lazy" width="900" height="600"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="evenements" aria-controls="gallery"><span class="s-name">Mariages &amp; événements</span><span class="s-desc">Préparatifs, cérémonies et émotions prises sur le vif.</span><span class="s-count">06 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/m0a0598-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/wil02577-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/2n9a0017-sm.webp" alt="" loading="lazy" width="600" height="900"><img src="assets/photos/m0a0571-sm.webp" alt="" loading="lazy" width="675" height="900"></span></button></li>
-    </ul>
-
-    <div class="g-zone">
-    <div class="filters" id="filters" role="group" aria-label="Filtrer la galerie">
-      <button class="chip" type="button" data-filter="all" data-label="Toutes les images" aria-pressed="true">Tout <sup>30</sup></button>
-      <button class="chip" type="button" data-filter="studio" data-label="Portrait studio" aria-pressed="false">Studio <sup>8</sup></button>
-      <button class="chip" type="button" data-filter="corporate" data-label="Portrait professionnel" aria-pressed="false">Corporate <sup>5</sup></button>
-      <button class="chip" type="button" data-filter="mode" data-label="Mode &amp; lifestyle" aria-pressed="false">Mode <sup>6</sup></button>
-      <button class="chip" type="button" data-filter="famille" data-label="Couples &amp; famille" aria-pressed="false">Couples &amp; famille <sup>5</sup></button>
-      <button class="chip" type="button" data-filter="evenements" data-label="Mariages &amp; événements" aria-pressed="false">Mariages &amp; événements <sup>6</sup></button>
-    </div>
-
-    <div class="gallery" id="gallery">
-      <figure class="g-item" data-cat="mode" data-slug="euromed-rge2411"><button class="g-open" type="button" style="--ph:#57410f;--ar:675/900" aria-label="Agrandir : Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune"><img src="assets/photos/euromed-rge2411-sm.webp" data-full="assets/photos/euromed-rge2411.webp" alt="Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°01</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="m0a0598" data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/1600 s · ISO 100"><button class="g-open" type="button" style="--ph:#403d3a;--ar:675/900" aria-label="Agrandir : Mariée souriante arrivant parmi les invités, en lumière naturelle"><img src="assets/photos/m0a0598-sm.webp" data-full="assets/photos/m0a0598.webp" alt="Mariée souriante arrivant parmi les invités, en lumière naturelle" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°02</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="baraka-gate1909"><button class="g-open" type="button" style="--ph:#3d3434;--ar:900/720" aria-label="Agrandir : Couple enlacé en séance studio, fond gris bleuté"><img src="assets/photos/baraka-gate1909-sm.webp" data-full="assets/photos/baraka-gate1909.webp" alt="Couple enlacé en séance studio, fond gris bleuté" width="900" height="720" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°03</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="256a8876-david-banga-studio"><button class="g-open" type="button" style="--ph:#383034;--ar:624/900" aria-label="Agrandir : Homme souriant tenant un casque audio, fond noir"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" data-full="assets/photos/256a8876-david-banga-studio.webp" alt="Homme souriant tenant un casque audio, fond noir" width="624" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°04</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="mandeleine-abou1100"><button class="g-open" type="button" style="--ph:#564a3c;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;une femme en tailleur, fond beige"><img src="assets/photos/mandeleine-abou1100-sm.webp" data-full="assets/photos/mandeleine-abou1100.webp" alt="Portrait professionnel d&#x27;une femme en tailleur, fond beige" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°05</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="ben-1814"><button class="g-open" type="button" style="--ph:#252822;--ar:720/900" aria-label="Agrandir : Femme en veste en jean et lunettes de soleil, fond vert texturé"><img src="assets/photos/ben-1814-sm.webp" data-full="assets/photos/ben-1814.webp" alt="Femme en veste en jean et lunettes de soleil, fond vert texturé" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°06</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="daniel-banam0543" data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button" style="--ph:#696969;--ar:900/600" aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles"><img src="assets/photos/daniel-banam0543-sm.webp" data-full="assets/photos/daniel-banam0543.webp" alt="Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°07</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="wil02577"><button class="g-open" type="button" style="--ph:#695d54;--ar:675/900" aria-label="Agrandir : Mariée en robe blanche tenant un bouquet de roses"><img src="assets/photos/wil02577-sm.webp" data-full="assets/photos/wil02577.webp" alt="Mariée en robe blanche tenant un bouquet de roses" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°08</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="linda0930"><button class="g-open" type="button" style="--ph:#606060;--ar:675/900" aria-label="Agrandir : Portrait de grossesse en noir et blanc, robe noire ajustée"><img src="assets/photos/linda0930-sm.webp" data-full="assets/photos/linda0930.webp" alt="Portrait de grossesse en noir et blanc, robe noire ajustée" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°09</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="2n9a0258"><button class="g-open" type="button" style="--ph:#60585d;--ar:900/720" aria-label="Agrandir : Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives"><img src="assets/photos/2n9a0258-sm.webp" data-full="assets/photos/2n9a0258.webp" alt="Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives" width="900" height="720" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°10</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="wil02129"><button class="g-open" type="button" style="--ph:#605a5e;--ar:675/900" aria-label="Agrandir : Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue"><img src="assets/photos/wil02129-sm.webp" data-full="assets/photos/wil02129.webp" alt="Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°11</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a0017"><button class="g-open" type="button" style="--ph:#725057;--ar:600/900" aria-label="Agrandir : Femme en tenue de cérémonie bordeaux et voile assorti"><img src="assets/photos/2n9a0017-sm.webp" data-full="assets/photos/2n9a0017.webp" alt="Femme en tenue de cérémonie bordeaux et voile assorti" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°12</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="esaie-lind0846"><button class="g-open" type="button" style="--ph:#43383e;--ar:600/900" aria-label="Agrandir : Couple élégant en tenue noire, fond lilas"><img src="assets/photos/esaie-lind0846-sm.webp" data-full="assets/photos/esaie-lind0846.webp" alt="Couple élégant en tenue noire, fond lilas" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°13</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="ben-1910"><button class="g-open" type="button" style="--ph:#242727;--ar:720/900" aria-label="Agrandir : Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé"><img src="assets/photos/ben-1910-sm.webp" data-full="assets/photos/ben-1910.webp" alt="Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°14</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0532"><button class="g-open" type="button" style="--ph:#37231a;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun"><img src="assets/photos/miss-mister-bde0532-sm.webp" data-full="assets/photos/miss-mister-bde0532.webp" alt="Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°15</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="2n9a9401"><button class="g-open" type="button" style="--ph:#505a5b;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret"><img src="assets/photos/2n9a9401-sm.webp" data-full="assets/photos/2n9a9401.webp" alt="Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°16</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="m0a0571" data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/160 s · ISO 100"><button class="g-open" type="button" style="--ph:#463635;--ar:675/900" aria-label="Agrandir : Mariée en peignoir de satin pendant les préparatifs"><img src="assets/photos/m0a0571-sm.webp" data-full="assets/photos/m0a0571.webp" alt="Mariée en peignoir de satin pendant les préparatifs" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°17</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="2n9a9317" data-exif="Canon EOS 7D Mark II · 50 mm · ƒ/3,2 · 1/400 s · ISO 100"><button class="g-open" type="button" style="--ph:#565234;--ar:900/600" aria-label="Agrandir : Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties"><img src="assets/photos/2n9a9317-sm.webp" data-full="assets/photos/2n9a9317.webp" alt="Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°18</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="2n9a8702"><button class="g-open" type="button" style="--ph:#5e6663;--ar:600/900" aria-label="Agrandir : Jeune homme en lunettes de soleil et veste verte, en extérieur"><img src="assets/photos/2n9a8702-sm.webp" data-full="assets/photos/2n9a8702.webp" alt="Jeune homme en lunettes de soleil et veste verte, en extérieur" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°19</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="david-banga-2"><button class="g-open" type="button" style="--ph:#616063;--ar:720/900" aria-label="Agrandir : Jeune homme en col roulé bleu marine assis sur un tabouret violet"><img src="assets/photos/david-banga-2-sm.webp" data-full="assets/photos/david-banga-2.webp" alt="Jeune homme en col roulé bleu marine assis sur un tabouret violet" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°20</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="sephis-shooting-portrait2195"><button class="g-open" type="button" style="--ph:#453c35;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp" data-full="assets/photos/sephis-shooting-portrait2195.webp" alt="Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°21</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a9591"><button class="g-open" type="button" style="--ph:#4d4d4d;--ar:900/600" aria-label="Agrandir : Étreinte émouvante lors d&#x27;un événement, en noir et blanc"><img src="assets/photos/2n9a9591-sm.webp" data-full="assets/photos/2n9a9591.webp" alt="Étreinte émouvante lors d&#x27;un événement, en noir et blanc" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°22</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="denise-marguerite-mane-sayana-c2"><button class="g-open" type="button" style="--ph:#494040;--ar:720/900" aria-label="Agrandir : Portrait de grossesse, robe blanche fluide sur fond brun"><img src="assets/photos/denise-marguerite-mane-sayana-c2-sm.webp" data-full="assets/photos/denise-marguerite-mane-sayana-c2.webp" alt="Portrait de grossesse, robe blanche fluide sur fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°23</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="wil02219"><button class="g-open" type="button" style="--ph:#676667;--ar:675/900" aria-label="Agrandir : Jeune femme riant, assise au sol en chemise lilas et jean"><img src="assets/photos/wil02219-sm.webp" data-full="assets/photos/wil02219.webp" alt="Jeune femme riant, assise au sol en chemise lilas et jean" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°24</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="5q2a1216"><button class="g-open" type="button" style="--ph:#636c6d;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une femme souriante au voile turquoise à motifs"><img src="assets/photos/5q2a1216-sm.webp" data-full="assets/photos/5q2a1216.webp" alt="Portrait d&#x27;une femme souriante au voile turquoise à motifs" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°25</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="ben-0023"><button class="g-open" type="button" style="--ph:#25242f;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"><img src="assets/photos/ben-0023-sm.webp" data-full="assets/photos/ben-0023.webp" alt="Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°26</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a0120"><button class="g-open" type="button" style="--ph:#6c4f51;--ar:600/900" aria-label="Agrandir : Femme en robe de soirée bordeaux brodée, devant des rideaux clairs"><img src="assets/photos/2n9a0120-sm.webp" data-full="assets/photos/2n9a0120.webp" alt="Femme en robe de soirée bordeaux brodée, devant des rideaux clairs" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°27</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="daniel-banam0537" data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button" style="--ph:#6e6e6e;--ar:900/600" aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio"><img src="assets/photos/daniel-banam0537-sm.webp" data-full="assets/photos/daniel-banam0537.webp" alt="Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°28</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0542"><button class="g-open" type="button" style="--ph:#312a29;--ar:720/900" aria-label="Agrandir : Jeune homme souriant, pull vert noué sur les épaules, fond brun"><img src="assets/photos/miss-mister-bde0542-sm.webp" data-full="assets/photos/miss-mister-bde0542.webp" alt="Jeune homme souriant, pull vert noué sur les épaules, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°29</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="wil02284"><button class="g-open" type="button" style="--ph:#605c5c;--ar:900/675" aria-label="Agrandir : Groupe d&#x27;amies complices allongées en studio, fond gris"><img src="assets/photos/wil02284-sm.webp" data-full="assets/photos/wil02284.webp" alt="Groupe d&#x27;amies complices allongées en studio, fond gris" width="900" height="675" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°30</span><span>Mode &amp; lifestyle</span></span></button></figure>
-    </div>
-    </div>
-
-    <div class="g-foot mono">
-      <span id="gStatus" aria-live="polite">30 images affichées</span>
-      <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-cursor="link">Plus de projets sur Behance ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════ QUOTE ═════════ -->
-<section class="quote" aria-label="Citation">
-  <div class="wrap">
-    <blockquote>
-      <p class="q-text" id="qText">Chaque photo raconte une histoire <span class="hl">unique.</span></p>
-      <cite class="q-cite mono">— David Banga</cite>
-    </blockquote>
-  </div>
-</section>
-
-<!-- ═════════ À PROPOS ═════════ -->
-<section class="sec" id="a-propos" aria-labelledby="t-about" style="padding-top:0">
-  <div class="wrap about-grid">
-    <div class="sheet rv" aria-label="Planche contact : une sélection d'images">
-      <div class="sheet-edge mono"><span>DB Studio ▸ 400</span><span>Planche contact</span></div>
-      <div class="sheet-grid">
-        <figure style="position:relative"><div class="fr" style="background:#505a5b"><img src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy" width="720" height="900"></div><figcaption><span>12</span><span>▸ 12A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy" width="720" height="900"></div><figcaption><span>13</span><span>▸ 13A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" loading="lazy" width="900" height="600"></div><figcaption><span>14</span><span>▸ 14A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy" width="675" height="900"></div><figcaption><span>15</span><span>▸ 15A</span></figcaption></figure>
-        <figure class="sel" style="position:relative"><div class="fr" style="background:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" loading="lazy" width="675" height="900"></div><figcaption><span>16</span><span>▸ 16A</span></figcaption><svg class="grease" viewBox="0 0 100 150" preserveAspectRatio="none" style="inset:-9% -16% -12% -14%" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M52 6C22 4 6 30 5 70s12 74 46 75 46-26 44-72S80 9 46 9c-9 0-17 2-23 6"/></svg></figure>
-        <figure style="position:relative"><div class="fr" style="background:#636c6d"><img src="assets/photos/5q2a1216-sm.webp" alt="" loading="lazy" width="720" height="900"></div><figcaption><span>17</span><span>▸ 17A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" loading="lazy" width="900" height="720"></div><figcaption><span>18</span><span>▸ 18A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt="" loading="lazy" width="720" height="900"></div><figcaption><span>19</span><span>▸ 19A</span></figcaption></figure>
-        <figure style="position:relative"><div class="fr" style="background:#453c35"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp" alt="" loading="lazy" width="720" height="900"></div><figcaption><span>20</span><span>▸ 20A</span></figcaption></figure>
+      <div class="hero-frame vf" aria-hidden="true"></div>
+      <div class="hero-content wrap">
+        <p class="hero-eyebrow mono"><span class="rec" aria-hidden="true"></span>Photographe · Infographe</p>
+        <h1 class="hero-name" aria-label="David Banga">
+          <span class="hn-line hn-david" aria-hidden="true">David</span>
+          <span class="hn-line hn-banga" aria-hidden="true">Banga</span>
+        </h1>
+        <p class="hero-sub">Portraits, séances studio et reportages. <em>Ivoirien, basé à Dakar.</em></p>
+        <div class="hero-ctas">
+          <a class="btn btn-accent" href="#realisations" data-cursor="link">Voir les réalisations <span
+              class="arr">↓</span></a>
+          <a class="btn"
+            href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+            target="_blank" rel="noopener" data-cursor="link">Réserver une séance <span class="arr">→</span></a>
+        </div>
       </div>
-      <div class="sheet-note mono"><span>Sélection au crayon gras</span><span>Retouche ✓</span></div>
+      <div class="hero-hud wrap mono" aria-hidden="true">
+        <span class="coords">14°41′ N — 17°26′ O · Dakar</span>
+        <span class="scroll">Défiler <i></i></span>
+      </div>
+    </section>
+
+    <!-- ═════════ MARQUEE ═════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="mq-track">
+        <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i
+            class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i
+            class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i
+            class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
+        <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i
+            class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i
+            class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i
+            class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
+      </div>
     </div>
 
-    <div class="about-body">
-      <p class="eyebrow mono">À propos</p>
-      <h2 class="h2" id="t-about">David <span class="serif-i">Banga</span></h2>
-      <p class="about-lead">Huit années derrière l'objectif, avec un sens du détail au service de <em>moments authentiques et spontanés.</em></p>
-      <div class="about-text">
-        <p>Photographe professionnel, David découvre la photographie dès ses premières années universitaires. Au fil des années, il perfectionne son art grâce à de nombreuses collaborations enrichissantes et à des formations auprès de certains devanciers.</p>
-        <p>Il est convaincu que chaque photo raconte une histoire unique. Son objectif cherche donc à refléter la personnalité et les émotions de chacun de ses sujets.</p>
-        <p>Son équipement professionnel, avec des objectifs variés, lui permet de s'adapter à toutes les conditions de prise de vue. Adepte de la retouche numérique, il sublime ses clichés tout en restant réaliste et conservateur.</p>
-      </div>
-      <dl class="facts">
-        <div><dt class="mono">Métier</dt><dd>Photographe · Infographe</dd></div>
-        <div><dt class="mono">Expérience</dt><dd>8 ans</dd></div>
-        <div><dt class="mono">Origine</dt><dd>Côte d'Ivoire</dd></div>
-        <div><dt class="mono">Basé à</dt><dd>Dakar, Sénégal</dd></div>
-      </dl>
-    </div>
-  </div>
-</section>
+    <!-- ═════════ RÉALISATIONS ═════════ -->
+    <section class="sec" id="realisations" aria-labelledby="t-real">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Réalisations — 30 images</p>
+            <h2 class="h2" id="t-real">Des visages,<br><span class="serif-i accent">des histoires.</span></h2>
+          </div>
+          <p class="sec-lead">Une sélection de portraits, de séances studio et de reportages. Choisissez une série pour
+            filtrer la galerie, puis touchez une image pour l'agrandir.</p>
+        </div>
 
-<!-- ═════════ SERVICES ═════════ -->
-<section class="sec services" id="services" aria-labelledby="t-svc">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Services</p>
-        <h2 class="h2" id="t-svc">Une gamme <span class="serif-i accent">complète.</span></h2>
-      </div>
-      <p class="sec-lead">Du studio au terrain, chaque prestation est pensée pour raconter votre histoire avec justesse.</p>
-    </div>
-    <div class="svc-grid">
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.6"/><path d="M8 6l1.5-2h5L16 6"/></svg></span>
-        <h3>Séances photo en studio</h3>
-        <p>Portraits individuels, couples, familles et maternité. Lumière et fond maîtrisés pour un rendu soigné.</p>
-        <div class="tags"><span>Portrait</span><span>Couple</span><span>Maternité</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.2-4.2 4.3-6 8-6s6.8 1.8 8 6"/></svg></span>
-        <h3>Portraits professionnels</h3>
-        <p>Photos corporate pour dirigeants, équipes et profils en ligne. Une image juste, à votre image.</p>
-        <div class="tags"><span>Corporate</span><span>Profil</span><span>Équipe</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M4 21h16"/></svg></span>
-        <h3>Reportages institutionnels</h3>
-        <p>Couverture d'entreprises, d'institutions, d'hôtels et de restaurants pour vos supports de communication.</p>
-        <div class="tags"><span>Entreprise</span><span>Hôtellerie</span><span>Gastronomie</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-        <h3>Reportages événementiels</h3>
-        <p>Mariages, cérémonies, soirées et événements d'entreprise. Les instants forts, sans mise en scène.</p>
-        <div class="tags"><span>Mariage</span><span>Cérémonie</span><span>Gala</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg></span>
-        <h3>Retouche &amp; infographie</h3>
-        <p>Retouche numérique réaliste et conservatrice, et création de supports graphiques pour prolonger vos images.</p>
-        <div class="tags"><span>Retouche</span><span>Infographie</span></div>
-      </article>
-      <a class="svc svc-cta" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">
-        <h3>Et bien plus <em>encore.</em></h3>
-        <p>Un besoin particulier ? Décrivez votre projet sur WhatsApp et recevez une proposition adaptée.</p>
-        <span class="go">Écrire sur WhatsApp <span aria-hidden="true">→</span></span>
-      </a>
-    </div>
-  </div>
-</section>
+        <ul class="series" id="series">
+          <li><button class="s-row" type="button" data-filter="studio" aria-controls="gallery"><span
+                class="s-name">Portraits studio</span><span class="s-desc">Lumière maîtrisée, fonds unis, personnalité
+                au premier plan.</span><span class="s-count">08 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" loading="lazy" width="624"
+                  height="900"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" loading="lazy" width="900"
+                  height="600"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy" width="675"
+                  height="900"><img src="assets/photos/miss-mister-bde0532-sm.webp" alt="" loading="lazy" width="720"
+                  height="900"></span></button></li>
+          <li><button class="s-row" type="button" data-filter="corporate" aria-controls="gallery"><span
+                class="s-name">Portraits professionnels</span><span class="s-desc">Dirigeants, cadres et entrepreneurs,
+                pour une image crédible.</span><span class="s-count">05 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/mandeleine-abou1100-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/2n9a0258-sm.webp" alt="" loading="lazy" width="900" height="720"><img
+                  src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/sephis-shooting-portrait2195-sm.webp" alt="" loading="lazy" width="720"
+                  height="900"></span></button></li>
+          <li><button class="s-row" type="button" data-filter="mode" aria-controls="gallery"><span class="s-name">Mode
+                &amp; lifestyle</span><span class="s-desc">Séances créatives, stylisme et attitude, en studio ou en
+                extérieur.</span><span class="s-count">06 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/euromed-rge2411-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/ben-1910-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/2n9a8702-sm.webp" alt="" loading="lazy" width="600" height="900"></span></button>
+          </li>
+          <li><button class="s-row" type="button" data-filter="famille" aria-controls="gallery"><span
+                class="s-name">Couples &amp; famille</span><span class="s-desc">Couples, familles et grossesse : les
+                liens qui comptent.</span><span class="s-count">05 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/baraka-gate1909-sm.webp" alt="" loading="lazy" width="900" height="720"><img
+                  src="assets/photos/linda0930-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/esaie-lind0846-sm.webp" alt="" loading="lazy" width="600" height="900"><img
+                  src="assets/photos/2n9a9317-sm.webp" alt="" loading="lazy" width="900" height="600"></span></button>
+          </li>
+          <li><button class="s-row" type="button" data-filter="evenements" aria-controls="gallery"><span
+                class="s-name">Mariages &amp; événements</span><span class="s-desc">Préparatifs, cérémonies et émotions
+                prises sur le vif.</span><span class="s-count">06 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/m0a0598-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/wil02577-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/2n9a0017-sm.webp" alt="" loading="lazy" width="600" height="900"><img
+                  src="assets/photos/m0a0571-sm.webp" alt="" loading="lazy" width="675" height="900"></span></button>
+          </li>
+        </ul>
 
-<!-- ═════════ PORTFOLIOS PDF ═════════ -->
-<section class="sec" id="portfolios" aria-labelledby="t-books">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Portfolios PDF</p>
-        <h2 class="h2" id="t-books">À feuilleter <span class="serif-i accent">en entier.</span></h2>
-      </div>
-      <p class="sec-lead">Deux e-books à consulter en ligne ou à partager avec votre équipe.</p>
-    </div>
-    <div class="books">
-      <article class="book rv">
-        <div class="cover-wrap">
-          <div class="cover cover-a" aria-hidden="true">
-            <img class="c-photo" src="assets/photos/ben-0023-sm.webp" alt="" loading="lazy">
-            <div class="c-top"><span>E-book</span><span>Vol. 01</span></div>
-            <div class="c-title">Portfolio <em>officiel</em></div>
-            <div class="c-bot"><img class="c-mono" src="assets/logo/monogram-dark.png" alt=""><span>David Banga</span></div>
+        <div class="g-zone">
+          <div class="filters" id="filters" role="group" aria-label="Filtrer la galerie">
+            <button class="chip" type="button" data-filter="all" data-label="Toutes les images" aria-pressed="true">Tout
+              <sup>30</sup></button>
+            <button class="chip" type="button" data-filter="studio" data-label="Portrait studio"
+              aria-pressed="false">Studio <sup>8</sup></button>
+            <button class="chip" type="button" data-filter="corporate" data-label="Portrait professionnel"
+              aria-pressed="false">Corporate <sup>5</sup></button>
+            <button class="chip" type="button" data-filter="mode" data-label="Mode &amp; lifestyle"
+              aria-pressed="false">Mode <sup>6</sup></button>
+            <button class="chip" type="button" data-filter="famille" data-label="Couples &amp; famille"
+              aria-pressed="false">Couples &amp; famille <sup>5</sup></button>
+            <button class="chip" type="button" data-filter="evenements" data-label="Mariages &amp; événements"
+              aria-pressed="false">Mariages &amp; événements <sup>6</sup></button>
+          </div>
+
+          <div class="gallery" id="gallery">
+            <figure class="g-item" data-cat="mode" data-slug="euromed-rge2411"><button class="g-open" type="button"
+                style="--ph:#57410f;--ar:675/900"
+                aria-label="Agrandir : Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune"><img
+                  src="assets/photos/euromed-rge2411-sm.webp" data-full="assets/photos/euromed-rge2411.webp"
+                  alt="Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune" width="675"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°01</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="m0a0598"
+              data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/1600 s · ISO 100"><button class="g-open"
+                type="button" style="--ph:#403d3a;--ar:675/900"
+                aria-label="Agrandir : Mariée souriante arrivant parmi les invités, en lumière naturelle"><img
+                  src="assets/photos/m0a0598-sm.webp" data-full="assets/photos/m0a0598.webp"
+                  alt="Mariée souriante arrivant parmi les invités, en lumière naturelle" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°02</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="baraka-gate1909"><button class="g-open" type="button"
+                style="--ph:#3d3434;--ar:900/720"
+                aria-label="Agrandir : Couple enlacé en séance studio, fond gris bleuté"><img
+                  src="assets/photos/baraka-gate1909-sm.webp" data-full="assets/photos/baraka-gate1909.webp"
+                  alt="Couple enlacé en séance studio, fond gris bleuté" width="900" height="720" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°03</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="256a8876-david-banga-studio"><button class="g-open"
+                type="button" style="--ph:#383034;--ar:624/900"
+                aria-label="Agrandir : Homme souriant tenant un casque audio, fond noir"><img
+                  src="assets/photos/256a8876-david-banga-studio-sm.webp"
+                  data-full="assets/photos/256a8876-david-banga-studio.webp"
+                  alt="Homme souriant tenant un casque audio, fond noir" width="624" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°04</span><span>Portrait
+                    studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="mandeleine-abou1100"><button class="g-open"
+                type="button" style="--ph:#564a3c;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;une femme en tailleur, fond beige"><img
+                  src="assets/photos/mandeleine-abou1100-sm.webp" data-full="assets/photos/mandeleine-abou1100.webp"
+                  alt="Portrait professionnel d&#x27;une femme en tailleur, fond beige" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°05</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="ben-1814"><button class="g-open" type="button"
+                style="--ph:#252822;--ar:720/900"
+                aria-label="Agrandir : Femme en veste en jean et lunettes de soleil, fond vert texturé"><img
+                  src="assets/photos/ben-1814-sm.webp" data-full="assets/photos/ben-1814.webp"
+                  alt="Femme en veste en jean et lunettes de soleil, fond vert texturé" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°06</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="daniel-banam0543"
+              data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#696969;--ar:900/600"
+                aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles"><img
+                  src="assets/photos/daniel-banam0543-sm.webp" data-full="assets/photos/daniel-banam0543.webp"
+                  alt="Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°07</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="wil02577"><button class="g-open" type="button"
+                style="--ph:#695d54;--ar:675/900"
+                aria-label="Agrandir : Mariée en robe blanche tenant un bouquet de roses"><img
+                  src="assets/photos/wil02577-sm.webp" data-full="assets/photos/wil02577.webp"
+                  alt="Mariée en robe blanche tenant un bouquet de roses" width="675" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°08</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="linda0930"><button class="g-open" type="button"
+                style="--ph:#606060;--ar:675/900"
+                aria-label="Agrandir : Portrait de grossesse en noir et blanc, robe noire ajustée"><img
+                  src="assets/photos/linda0930-sm.webp" data-full="assets/photos/linda0930.webp"
+                  alt="Portrait de grossesse en noir et blanc, robe noire ajustée" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°09</span><span>Couples &amp; famille</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="2n9a0258"><button class="g-open" type="button"
+                style="--ph:#60585d;--ar:900/720"
+                aria-label="Agrandir : Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives"><img
+                  src="assets/photos/2n9a0258-sm.webp" data-full="assets/photos/2n9a0258.webp"
+                  alt="Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives" width="900"
+                  height="720" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°10</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="wil02129"><button class="g-open" type="button"
+                style="--ph:#605a5e;--ar:675/900"
+                aria-label="Agrandir : Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue"><img
+                  src="assets/photos/wil02129-sm.webp" data-full="assets/photos/wil02129.webp"
+                  alt="Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue" width="675"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°11</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a0017"><button class="g-open" type="button"
+                style="--ph:#725057;--ar:600/900"
+                aria-label="Agrandir : Femme en tenue de cérémonie bordeaux et voile assorti"><img
+                  src="assets/photos/2n9a0017-sm.webp" data-full="assets/photos/2n9a0017.webp"
+                  alt="Femme en tenue de cérémonie bordeaux et voile assorti" width="600" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°12</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="esaie-lind0846"><button class="g-open" type="button"
+                style="--ph:#43383e;--ar:600/900" aria-label="Agrandir : Couple élégant en tenue noire, fond lilas"><img
+                  src="assets/photos/esaie-lind0846-sm.webp" data-full="assets/photos/esaie-lind0846.webp"
+                  alt="Couple élégant en tenue noire, fond lilas" width="600" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°13</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="ben-1910"><button class="g-open" type="button"
+                style="--ph:#242727;--ar:720/900"
+                aria-label="Agrandir : Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé"><img
+                  src="assets/photos/ben-1910-sm.webp" data-full="assets/photos/ben-1910.webp"
+                  alt="Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°14</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0532"><button class="g-open"
+                type="button" style="--ph:#37231a;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun"><img
+                  src="assets/photos/miss-mister-bde0532-sm.webp" data-full="assets/photos/miss-mister-bde0532.webp"
+                  alt="Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°15</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="2n9a9401"><button class="g-open" type="button"
+                style="--ph:#505a5b;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret"><img
+                  src="assets/photos/2n9a9401-sm.webp" data-full="assets/photos/2n9a9401.webp"
+                  alt="Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°16</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="m0a0571"
+              data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/160 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#463635;--ar:675/900"
+                aria-label="Agrandir : Mariée en peignoir de satin pendant les préparatifs"><img
+                  src="assets/photos/m0a0571-sm.webp" data-full="assets/photos/m0a0571.webp"
+                  alt="Mariée en peignoir de satin pendant les préparatifs" width="675" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°17</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="2n9a9317"
+              data-exif="Canon EOS 7D Mark II · 50 mm · ƒ/3,2 · 1/400 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#565234;--ar:900/600"
+                aria-label="Agrandir : Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties"><img
+                  src="assets/photos/2n9a9317-sm.webp" data-full="assets/photos/2n9a9317.webp"
+                  alt="Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°18</span><span>Couples &amp; famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="2n9a8702"><button class="g-open" type="button"
+                style="--ph:#5e6663;--ar:600/900"
+                aria-label="Agrandir : Jeune homme en lunettes de soleil et veste verte, en extérieur"><img
+                  src="assets/photos/2n9a8702-sm.webp" data-full="assets/photos/2n9a8702.webp"
+                  alt="Jeune homme en lunettes de soleil et veste verte, en extérieur" width="600" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°19</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="david-banga-2"><button class="g-open" type="button"
+                style="--ph:#616063;--ar:720/900"
+                aria-label="Agrandir : Jeune homme en col roulé bleu marine assis sur un tabouret violet"><img
+                  src="assets/photos/david-banga-2-sm.webp" data-full="assets/photos/david-banga-2.webp"
+                  alt="Jeune homme en col roulé bleu marine assis sur un tabouret violet" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°20</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="sephis-shooting-portrait2195"><button class="g-open"
+                type="button" style="--ph:#453c35;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun"><img
+                  src="assets/photos/sephis-shooting-portrait2195-sm.webp"
+                  data-full="assets/photos/sephis-shooting-portrait2195.webp"
+                  alt="Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°21</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a9591"><button class="g-open" type="button"
+                style="--ph:#4d4d4d;--ar:900/600"
+                aria-label="Agrandir : Étreinte émouvante lors d&#x27;un événement, en noir et blanc"><img
+                  src="assets/photos/2n9a9591-sm.webp" data-full="assets/photos/2n9a9591.webp"
+                  alt="Étreinte émouvante lors d&#x27;un événement, en noir et blanc" width="900" height="600"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°22</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="denise-marguerite-mane-sayana-c2"><button
+                class="g-open" type="button" style="--ph:#494040;--ar:720/900"
+                aria-label="Agrandir : Portrait de grossesse, robe blanche fluide sur fond brun"><img
+                  src="assets/photos/denise-marguerite-mane-sayana-c2-sm.webp"
+                  data-full="assets/photos/denise-marguerite-mane-sayana-c2.webp"
+                  alt="Portrait de grossesse, robe blanche fluide sur fond brun" width="720" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°23</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="wil02219"><button class="g-open" type="button"
+                style="--ph:#676667;--ar:675/900"
+                aria-label="Agrandir : Jeune femme riant, assise au sol en chemise lilas et jean"><img
+                  src="assets/photos/wil02219-sm.webp" data-full="assets/photos/wil02219.webp"
+                  alt="Jeune femme riant, assise au sol en chemise lilas et jean" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°24</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="5q2a1216"><button class="g-open" type="button"
+                style="--ph:#636c6d;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une femme souriante au voile turquoise à motifs"><img
+                  src="assets/photos/5q2a1216-sm.webp" data-full="assets/photos/5q2a1216.webp"
+                  alt="Portrait d&#x27;une femme souriante au voile turquoise à motifs" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°25</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="ben-0023"><button class="g-open" type="button"
+                style="--ph:#25242f;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"><img
+                  src="assets/photos/ben-0023-sm.webp" data-full="assets/photos/ben-0023.webp"
+                  alt="Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"
+                  width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°26</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a0120"><button class="g-open" type="button"
+                style="--ph:#6c4f51;--ar:600/900"
+                aria-label="Agrandir : Femme en robe de soirée bordeaux brodée, devant des rideaux clairs"><img
+                  src="assets/photos/2n9a0120-sm.webp" data-full="assets/photos/2n9a0120.webp"
+                  alt="Femme en robe de soirée bordeaux brodée, devant des rideaux clairs" width="600" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°27</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="daniel-banam0537"
+              data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#6e6e6e;--ar:900/600"
+                aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio"><img
+                  src="assets/photos/daniel-banam0537-sm.webp" data-full="assets/photos/daniel-banam0537.webp"
+                  alt="Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°28</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0542"><button class="g-open"
+                type="button" style="--ph:#312a29;--ar:720/900"
+                aria-label="Agrandir : Jeune homme souriant, pull vert noué sur les épaules, fond brun"><img
+                  src="assets/photos/miss-mister-bde0542-sm.webp" data-full="assets/photos/miss-mister-bde0542.webp"
+                  alt="Jeune homme souriant, pull vert noué sur les épaules, fond brun" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°29</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="wil02284"><button class="g-open" type="button"
+                style="--ph:#605c5c;--ar:900/675"
+                aria-label="Agrandir : Groupe d&#x27;amies complices allongées en studio, fond gris"><img
+                  src="assets/photos/wil02284-sm.webp" data-full="assets/photos/wil02284.webp"
+                  alt="Groupe d&#x27;amies complices allongées en studio, fond gris" width="900" height="675"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°30</span><span>Mode &amp; lifestyle</span></span></button></figure>
           </div>
         </div>
-        <div class="book-info">
-          <span class="mono">PDF · Google Drive</span>
-          <h3>Portfolio officiel</h3>
-          <p>Le book de référence : portraits, studio, corporate et événements.</p>
-          <a class="btn btn-accent" href="https://drive.google.com/file/d/1NK169NUXUy979qw4C9okyolPZr9rO0Qm/view?usp=sharing" target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+
+        <div class="g-foot mono">
+          <span id="gStatus" aria-live="polite">30 images affichées</span>
+          <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-cursor="link">Plus de projets
+            sur Behance ↗</a>
         </div>
-      </article>
-      <article class="book rv">
-        <div class="cover-wrap">
-          <div class="cover cover-b" aria-hidden="true">
-            <div class="c-top"><span>E-book</span><span>Vol. 02</span></div>
-            <div class="c-title">Hôtellerie <em>&amp; gastronomie</em></div>
-            <div class="c-bot"><span>Reportages<br>institutionnels</span><span>David Banga</span></div>
+      </div>
+    </section>
+
+    <!-- ═════════ QUOTE ═════════ -->
+    <section class="quote" aria-label="Citation">
+      <div class="wrap">
+        <blockquote>
+          <p class="q-text" id="qText">Chaque photo raconte une histoire <span class="hl">unique.</span></p>
+          <cite class="q-cite mono">— David Banga</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ═════════ À PROPOS ═════════ -->
+    <section class="sec" id="a-propos" aria-labelledby="t-about" style="padding-top:0">
+      <div class="wrap about-grid">
+        <div class="sheet rv" aria-label="Planche contact : une sélection d'images">
+          <div class="sheet-edge mono"><span>DB Studio ▸ 400</span><span>Planche contact</span></div>
+          <div class="sheet-grid">
+            <figure style="position:relative">
+              <div class="fr" style="background:#505a5b"><img src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy"
+                  width="720" height="900"></div>
+              <figcaption><span>12</span><span>▸ 12A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy"
+                  width="720" height="900"></div>
+              <figcaption><span>13</span><span>▸ 13A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt=""
+                  loading="lazy" width="900" height="600"></div>
+              <figcaption><span>14</span><span>▸ 14A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy"
+                  width="675" height="900"></div>
+              <figcaption><span>15</span><span>▸ 15A</span></figcaption>
+            </figure>
+            <figure class="sel" style="position:relative">
+              <div class="fr" style="background:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt=""
+                  loading="lazy" width="675" height="900"></div>
+              <figcaption><span>16</span><span>▸ 16A</span></figcaption><svg class="grease" viewBox="0 0 100 150"
+                preserveAspectRatio="none" style="inset:-9% -16% -12% -14%" aria-hidden="true">
+                <path vector-effect="non-scaling-stroke"
+                  d="M52 6C22 4 6 30 5 70s12 74 46 75 46-26 44-72S80 9 46 9c-9 0-17 2-23 6" />
+              </svg>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#636c6d"><img src="assets/photos/5q2a1216-sm.webp" alt="" loading="lazy"
+                  width="720" height="900"></div>
+              <figcaption><span>17</span><span>▸ 17A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt=""
+                  loading="lazy" width="900" height="720"></div>
+              <figcaption><span>18</span><span>▸ 18A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt=""
+                  loading="lazy" width="720" height="900"></div>
+              <figcaption><span>19</span><span>▸ 19A</span></figcaption>
+            </figure>
+            <figure style="position:relative">
+              <div class="fr" style="background:#453c35"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp"
+                  alt="" loading="lazy" width="720" height="900"></div>
+              <figcaption><span>20</span><span>▸ 20A</span></figcaption>
+            </figure>
+          </div>
+          <div class="sheet-note mono"><span>Sélection au crayon gras</span><span>Retouche ✓</span></div>
+        </div>
+
+        <div class="about-body">
+          <p class="eyebrow mono">À propos</p>
+          <h2 class="h2" id="t-about">David <span class="serif-i">Banga</span></h2>
+          <p class="about-lead">Huit années derrière l'objectif, avec un sens du détail au service de <em>moments
+              authentiques et spontanés.</em></p>
+          <div class="about-text">
+            <p>Photographe professionnel, David découvre la photographie dès ses premières années universitaires. Au fil
+              des années, il perfectionne son art grâce à de nombreuses collaborations enrichissantes et à des
+              formations auprès de certains devanciers.</p>
+            <p>Il est convaincu que chaque photo raconte une histoire unique. Son objectif cherche donc à refléter la
+              personnalité et les émotions de chacun de ses sujets.</p>
+            <p>Son équipement professionnel, avec des objectifs variés, lui permet de s'adapter à toutes les conditions
+              de prise de vue. Adepte de la retouche numérique, il sublime ses clichés tout en restant réaliste et
+              conservateur.</p>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt class="mono">Métier</dt>
+              <dd>Photographe · Infographe</dd>
+            </div>
+            <div>
+              <dt class="mono">Expérience</dt>
+              <dd>8 ans</dd>
+            </div>
+            <div>
+              <dt class="mono">Origine</dt>
+              <dd>Côte d'Ivoire</dd>
+            </div>
+            <div>
+              <dt class="mono">Basé à</dt>
+              <dd>Dakar, Sénégal</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ SERVICES ═════════ -->
+    <section class="sec services" id="services" aria-labelledby="t-svc">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Services</p>
+            <h2 class="h2" id="t-svc">Une gamme <span class="serif-i accent">complète.</span></h2>
+          </div>
+          <p class="sec-lead">Du studio au terrain, chaque prestation est pensée pour raconter votre histoire avec
+            justesse.</p>
+        </div>
+        <div class="svc-grid">
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="13" rx="2" />
+                <circle cx="12" cy="12.5" r="3.6" />
+                <path d="M8 6l1.5-2h5L16 6" />
+              </svg></span>
+            <h3>Séances photo en studio</h3>
+            <p>Portraits individuels, couples, familles et maternité. Lumière et fond maîtrisés pour un rendu soigné.
+            </p>
+            <div class="tags"><span>Portrait</span><span>Couple</span><span>Maternité</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c1.2-4.2 4.3-6 8-6s6.8 1.8 8 6" />
+              </svg></span>
+            <h3>Portraits professionnels</h3>
+            <p>Photos corporate pour dirigeants, équipes et profils en ligne. Une image juste, à votre image.</p>
+            <div class="tags"><span>Corporate</span><span>Profil</span><span>Équipe</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M4 21V8l8-5 8 5v13" />
+                <path d="M9 21v-6h6v6" />
+                <path d="M4 21h16" />
+              </svg></span>
+            <h3>Reportages institutionnels</h3>
+            <p>Couverture d'entreprises, d'institutions, d'hôtels et de restaurants pour vos supports de communication.
+            </p>
+            <div class="tags"><span>Entreprise</span><span>Hôtellerie</span><span>Gastronomie</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" />
+              </svg></span>
+            <h3>Reportages événementiels</h3>
+            <p>Mariages, cérémonies, soirées et événements d'entreprise. Les instants forts, sans mise en scène.</p>
+            <div class="tags"><span>Mariage</span><span>Cérémonie</span><span>Gala</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M4 20l4-1 11-11-3-3L5 16z" />
+                <path d="M14 6l3 3" />
+              </svg></span>
+            <h3>Retouche &amp; infographie</h3>
+            <p>Retouche numérique réaliste et conservatrice, et création de supports graphiques pour prolonger vos
+              images.</p>
+            <div class="tags"><span>Retouche</span><span>Infographie</span></div>
+          </article>
+          <a class="svc svc-cta"
+            href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+            target="_blank" rel="noopener" data-cursor="link">
+            <h3>Et bien plus <em>encore.</em></h3>
+            <p>Un besoin particulier ? Décrivez votre projet sur WhatsApp et recevez une proposition adaptée.</p>
+            <span class="go">Écrire sur WhatsApp <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ PORTFOLIOS PDF ═════════ -->
+    <section class="sec" id="portfolios" aria-labelledby="t-books">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Portfolios PDF</p>
+            <h2 class="h2" id="t-books">À feuilleter <span class="serif-i accent">en entier.</span></h2>
+          </div>
+          <p class="sec-lead">Deux e-books à consulter en ligne ou à partager avec votre équipe.</p>
+        </div>
+        <div class="books">
+          <article class="book rv">
+            <div class="cover-wrap">
+              <div class="cover cover-a" aria-hidden="true">
+                <img class="c-photo" src="assets/photos/ben-0023-sm.webp" alt="" loading="lazy">
+                <div class="c-top"><span>E-book</span><span>Vol. 01</span></div>
+                <div class="c-title">Portfolio <em>officiel</em></div>
+                <div class="c-bot"><img class="c-mono" src="assets/logo/monogram-dark.png" alt=""><span>David
+                    Banga</span></div>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="mono">PDF · Google Drive</span>
+              <h3>Portfolio officiel</h3>
+              <p>Le book de référence : portraits, studio, corporate et événements.</p>
+              <a class="btn btn-accent"
+                href="https://drive.google.com/file/d/1NK169NUXUy979qw4C9okyolPZr9rO0Qm/view?usp=sharing"
+                target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+            </div>
+          </article>
+          <article class="book rv">
+            <div class="cover-wrap">
+              <div class="cover cover-b" aria-hidden="true">
+                <div class="c-top"><span>E-book</span><span>Vol. 02</span></div>
+                <div class="c-title">Hôtellerie <em>&amp; gastronomie</em></div>
+                <div class="c-bot"><span>Reportages<br>institutionnels</span><span>David Banga</span></div>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="mono">PDF · Google Drive</span>
+              <h3>Hôtellerie &amp; gastronomie</h3>
+              <p>Établissements, ambiances et plats mis en valeur pour l'hôtellerie et la restauration.</p>
+              <a class="btn btn-accent"
+                href="https://drive.google.com/file/d/1hqhsBW-v3215j9sXjhWreCY2-exIy9ZD/view?usp=sharing"
+                target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════ CONTACT ═════════ -->
+  <footer class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap">
+      <p class="eyebrow mono">Une séance, un événement, un projet ?</p>
+      <h2 class="c-big" id="t-contact">Parlons-<em>en</em><span class="dot">.</span></h2>
+
+      <div class="c-grid">
+        <div>
+          <div class="c-line">
+            <span class="mono">E-mail</span>
+            <a class="c-value" href="mailto:davidbanga@outlook.fr" data-cursor="link">davidbanga@outlook.fr</a>
+            <button class="copy" type="button" data-copy="davidbanga@outlook.fr">Copier</button>
+          </div>
+          <div class="c-line">
+            <span class="mono">WhatsApp Business</span>
+            <a class="c-value"
+              href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+              target="_blank" rel="noopener" data-cursor="link">+221 77 733 00 57</a>
+            <button class="copy" type="button" data-copy="+221777330057">Copier</button>
           </div>
         </div>
-        <div class="book-info">
-          <span class="mono">PDF · Google Drive</span>
-          <h3>Hôtellerie &amp; gastronomie</h3>
-          <p>Établissements, ambiances et plats mis en valeur pour l'hôtellerie et la restauration.</p>
-          <a class="btn btn-accent" href="https://drive.google.com/file/d/1hqhsBW-v3215j9sXjhWreCY2-exIy9ZD/view?usp=sharing" target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- ═════════ CONTACT ═════════ -->
-<footer class="contact" id="contact" aria-labelledby="t-contact">
-  <div class="wrap">
-    <p class="eyebrow mono">Une séance, un événement, un projet ?</p>
-    <h2 class="c-big" id="t-contact">Parlons-<em>en</em><span class="dot">.</span></h2>
-
-    <div class="c-grid">
-      <div>
-        <div class="c-line">
-          <span class="mono">E-mail</span>
-          <a class="c-value" href="mailto:davidbanga@outlook.fr" data-cursor="link">davidbanga@outlook.fr</a>
-          <button class="copy" type="button" data-copy="davidbanga@outlook.fr">Copier</button>
-        </div>
-        <div class="c-line">
-          <span class="mono">WhatsApp Business</span>
-          <a class="c-value" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">+221 77 733 00 57</a>
-          <button class="copy" type="button" data-copy="+221777330057">Copier</button>
+        <div>
+          <div class="barrels">
+            <a class="barrel"
+              href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+              target="_blank" rel="noopener" data-label="WhatsApp">WhatsApp</a>
+            <a class="barrel" href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener"
+              data-label="Instagram">Instagram</a>
+            <a class="barrel" href="https://www.behance.net/bangadavid" target="_blank" rel="noopener"
+              data-label="Behance">Behance</a>
+            <a class="barrel" href="mailto:davidbanga@outlook.fr" data-label="E-mail">E-mail</a>
+          </div>
+          <dl class="c-meta">
+            <div>
+              <dt class="mono">Studio</dt>
+              <dd>Dakar, Sénégal</dd>
+            </div>
+            <div>
+              <dt class="mono">Heure à Dakar</dt>
+              <dd id="clock">GMT+0</dd>
+            </div>
+            <div>
+              <dt class="mono">Coordonnées</dt>
+              <dd>14.6928° N, 17.4467° O</dd>
+            </div>
+            <div>
+              <dt class="mono">Instagram</dt>
+              <dd>@davidbanga_studio</dd>
+            </div>
+          </dl>
         </div>
       </div>
-      <div>
-        <div class="barrels">
-          <a class="barrel" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-label="WhatsApp">WhatsApp</a>
-          <a class="barrel" href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener" data-label="Instagram">Instagram</a>
-          <a class="barrel" href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-label="Behance">Behance</a>
-          <a class="barrel" href="mailto:davidbanga@outlook.fr" data-label="E-mail">E-mail</a>
-        </div>
-        <dl class="c-meta">
-          <div><dt class="mono">Studio</dt><dd>Dakar, Sénégal</dd></div>
-          <div><dt class="mono">Heure à Dakar</dt><dd id="clock">GMT+0</dd></div>
-          <div><dt class="mono">Coordonnées</dt><dd>14.6928° N, 17.4467° O</dd></div>
-          <div><dt class="mono">Instagram</dt><dd>@davidbanga_studio</dd></div>
-        </dl>
+
+      <div class="sign"><img src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405"
+          height="310" loading="lazy"></div>
+      <div class="legal mono">
+        <span>© <span id="year">2026</span> David Banga Studio. Tous droits réservés.</span>
+        <span>Toutes les photographies © David Banga</span>
+        <a href="#accueil">Haut de page ↑</a>
       </div>
     </div>
+  </footer>
 
-    <div class="sign"><img src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405" height="310" loading="lazy"></div>
-    <div class="legal mono">
-      <span>© <span id="year">2026</span> David Banga Studio. Tous droits réservés.</span>
-      <span>Toutes les photographies © David Banga</span>
-      <a href="#accueil">Haut de page ↑</a>
+  <a class="fab" id="fab"
+    href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+    target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp : +221 77 733 00 57">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.6z" />
+      <path d="M9 8.6c.3 2.9 2.6 5.5 5.6 6l1-1.4-1.9-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-1.9z" />
+    </svg>
+    <span class="fab-txt">WhatsApp</span>
+  </a>
+
+  <div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekImg"></div>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse photo" hidden>
+    <div class="lb-top">
+      <span class="mono"><span class="lb-count" id="lbCount">01 / 30</span> &nbsp;·&nbsp; <span
+          id="lbCat"></span></span>
+      <button class="lb-close mono" id="lbClose" type="button">Fermer <span aria-hidden="true">✕</span></button>
+    </div>
+    <figure class="lb-stage" id="lbStage">
+      <img class="lb-img" id="lbImg" alt="">
+      <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Image précédente">←</button>
+      <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Image suivante">→</button>
+    </figure>
+    <div class="lb-bot">
+      <p class="lb-cap" id="lbCap"></p>
+      <span class="lb-exif mono" id="lbExif"></span>
     </div>
   </div>
-</footer>
 
-<a class="fab" id="fab" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp : +221 77 733 00 57">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.6z"/><path d="M9 8.6c.3 2.9 2.6 5.5 5.6 6l1-1.4-1.9-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-1.9z"/></svg>
-  <span class="fab-txt">WhatsApp</span>
-</a>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot" id="cDot"></span><span class="cursor-ring"
+      id="cRing"><span class="cursor-label" id="cLabel">Voir</span></span></div>
 
-<div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekImg"></div>
+  <script src="assets/js/main.js" type="module" defer></script>
+</body>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse photo" hidden>
-  <div class="lb-top">
-    <span class="mono"><span class="lb-count" id="lbCount">01 / 30</span> &nbsp;·&nbsp; <span id="lbCat"></span></span>
-    <button class="lb-close mono" id="lbClose" type="button">Fermer <span aria-hidden="true">✕</span></button>
-  </div>
-  <figure class="lb-stage" id="lbStage">
-    <img class="lb-img" id="lbImg" alt="">
-    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Image précédente">←</button>
-    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Image suivante">→</button>
-  </figure>
-  <div class="lb-bot">
-    <p class="lb-cap" id="lbCap"></p>
-    <span class="lb-exif mono" id="lbExif"></span>
-  </div>
-</div>
-
-<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot" id="cDot"></span><span class="cursor-ring" id="cRing"><span class="cursor-label" id="cLabel">Voir</span></span></div>
-
-<script>
-(function(){
-  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-  const root=document.documentElement;
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  const lerp=(a,b,t)=>a+(b-a)*t;
-  const pad=n=>String(n).padStart(2,'0');
-
-  /* split hero name into letters */
-  $$('.hero-name .hn-line').forEach(line=>{
-    const t=line.textContent; line.textContent='';
-    [...t].forEach((c,i)=>{const s=document.createElement('span');s.className='ch';s.style.setProperty('--i',i+(line.classList.contains('hn-banga')?3:0));s.textContent=c;line.appendChild(s);});
-  });
-
-  /* loader */
-  const loader=$('#loader'), countEl=$('#loaderCount'), bar=$('#loaderBar');
-  function reveal(){
-    root.classList.add('hero-ready');
-    if(!loader) return;
-    loader.classList.add('out');
-    setTimeout(()=>loader.classList.add('gone'),1100);
-  }
-  if(reduce){ loader&&loader.classList.add('gone'); root.classList.add('hero-ready'); }
-  else{
-    root.classList.add('js-anim');
-    const imgs=$$('#field img'); let done=0; const total=imgs.length||1;
-    const t0=performance.now(); let shown=0, finished=false;
-    const bump=()=>{done++;};
-    imgs.forEach(im=>{ if(im.complete) bump(); else { im.addEventListener('load',bump,{once:true}); im.addEventListener('error',bump,{once:true}); } });
-    (function tick(now){
-      const elapsed=now-t0;
-      const target=Math.min(100, Math.min(done/total*100, elapsed/1400*100) );
-      const forced=elapsed>3600 ? 100 : target;
-      shown=lerp(shown,forced,.12); if(forced-shown<.6) shown=forced;
-      countEl.textContent=String(Math.round(shown)).padStart(3,'0');
-      bar.style.transform='scaleX('+(shown/100)+')';
-      if(shown>=100 && !finished){ finished=true; setTimeout(reveal,260); return; }
-      requestAnimationFrame(tick);
-    })(t0);
-  }
-
-  /* header behaviour */
-  const head=$('#head'), fab=$('#fab'); let lastY=scrollY;
-  function onScroll(){
-    const y=scrollY;
-    head.classList.toggle('scrolled', y>40);
-    const menuOpen=$('#menuBtn').getAttribute('aria-expanded')==='true';
-    head.classList.toggle('hide', !menuOpen && y>lastY && y>400);
-    lastY=y;
-    const c=$('#contact'), h=$('#accueil'); fab.classList.toggle('away', (h && y < h.offsetHeight*.55) || (c && c.getBoundingClientRect().top < innerHeight*.6));
-  }
-  addEventListener('scroll',onScroll,{passive:true}); onScroll();
-
-  /* active nav link */
-  const navLinks=$$('.nav a');
-  const io=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){ navLinks.forEach(a=>a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id)); } });},{rootMargin:'-45% 0px -50% 0px'});
-  ['realisations','a-propos','services','portfolios','contact'].forEach(id=>{const el=document.getElementById(id); el&&io.observe(el);});
-
-  /* mobile menu */
-  const menuBtn=$('#menuBtn'), mnav=$('#mnav');
-  function setMenu(open){ menuBtn.setAttribute('aria-expanded',open); mnav.classList.toggle('open',open); root.style.overflow=open?'hidden':''; if(open) head.classList.remove('hide'); }
-  menuBtn.addEventListener('click',()=>setMenu(menuBtn.getAttribute('aria-expanded')!=='true'));
-  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-
-  /* hero parallax field */
-  const frames=$$('.pf'); const hero=$('#accueil');
-  let mx=0,my=0,cx=0,cy=0, heroVisible=true;
-  new IntersectionObserver(es=>{heroVisible=es[0].isIntersecting;}).observe(hero);
-  if(!reduce){
-    addEventListener('mousemove',e=>{ mx=(e.clientX/innerWidth-.5)*2; my=(e.clientY/innerHeight-.5)*2; },{passive:true});
-    (function loop(){
-      if(heroVisible){
-        cx=lerp(cx,mx,.06); cy=lerp(cy,my,.06);
-        const sy=scrollY;
-        frames.forEach(f=>{ const d=parseFloat(f.dataset.depth)||.1; f.style.transform=`translate3d(${(-cx*d*260).toFixed(1)}px,${(-cy*d*200 - sy*d*2.2).toFixed(1)}px,0)`; });
-      }
-      requestAnimationFrame(loop);
-    })();
-  }
-
-  /* gallery data */
-  const items=$$('.g-item');
-  let visible=items.slice();
-  const status=$('#gStatus');
-  const chips=$$('.chip');
-  const catLabel={};
-  chips.forEach(c=>{catLabel[c.dataset.filter]=c.dataset.label;});
-
-  const gallery=$('#gallery');
-  function layout(){
-    const cols=innerWidth<=1080?2:3;
-    gallery.classList.add('masonry'); gallery.style.setProperty('--cols',cols);
-    const gap=parseFloat(getComputedStyle(gallery).columnGap)||16;
-    const colW=(gallery.clientWidth-gap*(cols-1))/cols;
-    const tops=new Array(cols).fill(0);            /* shortest-column masonry, in reading order */
-    items.forEach(it=>{
-      if(it.hidden) return;
-      const im=it.querySelector('img'); const w=+im.getAttribute('width'), h=+im.getAttribute('height');
-      const span=Math.ceil((colW*h/w+gap)/4);
-      let c=0; for(let k=1;k<cols;k++) if(tops[k]<tops[c]-2) c=k;
-      it.style.gridColumn=String(c+1); it.style.gridRow=(tops[c]+1)+' / span '+span;
-      tops[c]+=span;
-    });
-  }
-  layout(); let rz; addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(layout,120);});
-
-  function applyFilter(f, scroll){
-    chips.forEach(c=>c.setAttribute('aria-pressed', c.dataset.filter===f));
-    const show=it=>f==='all'||it.dataset.cat===f;
-    items.forEach(it=>{ if(!show(it)) it.classList.add('fading'); });
-    setTimeout(()=>{
-      items.forEach(it=>{ const s=show(it); it.hidden=!s; if(s){ it.classList.add('fading'); requestAnimationFrame(()=>requestAnimationFrame(()=>it.classList.remove('fading'))); } });
-      visible=items.filter(show); layout();
-      status.textContent=visible.length+' image'+(visible.length>1?'s':'')+' affichée'+(visible.length>1?'s':'')+(f==='all'?'':' — '+catLabel[f]);
-    }, reduce?0:260);
-    if(scroll){ const g=$('#filters'); const y=g.getBoundingClientRect().top+scrollY-110; scrollTo({top:y,behavior:reduce?'auto':'smooth'}); }
-  }
-  chips.forEach(c=>c.addEventListener('click',()=>applyFilter(c.dataset.filter,false)));
-  $$('.s-row').forEach(r=>r.addEventListener('click',()=>applyFilter(r.dataset.filter,true)));
-
-  /* series hover peek */
-  const peek=$('#peek'), peekImg=$('#peekImg');
-  if(fine && !reduce){
-    let px=0,py=0,tx=0,ty=0,on=false,cyc=null;
-    const srcs=f=>items.filter(i=>i.dataset.cat===f).map(i=>i.querySelector('img').getAttribute('src'));
-    $$('.s-row').forEach(r=>{
-      r.addEventListener('mouseenter',()=>{ const list=srcs(r.dataset.filter); let k=0; peekImg.src=list[0]; peek.classList.add('on'); on=true; clearInterval(cyc); cyc=setInterval(()=>{k=(k+1)%list.length; peekImg.src=list[k];},650); });
-      r.addEventListener('mouseleave',()=>{ peek.classList.remove('on'); on=false; clearInterval(cyc); });
-    });
-    addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;},{passive:true});
-    (function pl(){ px=lerp(px,tx,.14); py=lerp(py,ty,.14); peek.style.left=px+'px'; peek.style.top=py+'px'; requestAnimationFrame(pl); })();
-  }
-
-  /* lightbox */
-  const lb=$('#lb'), lbImg=$('#lbImg'), lbCount=$('#lbCount'), lbCat=$('#lbCat'), lbCap=$('#lbCap'), lbExif=$('#lbExif');
-  let cur=0, lastFocus=null;
-  function show(i){
-    cur=(i+visible.length)%visible.length;
-    const it=visible[cur], im=it.querySelector('img');
-    lbImg.classList.add('swap');
-    const src=im.dataset.full;
-    const pre=new Image(); pre.src=src;
-    const go=()=>{ lbImg.src=src; lbImg.alt=im.alt; lbImg.classList.remove('swap'); };
-    if(pre.complete) go(); else { lbImg.src=im.getAttribute('src'); lbImg.alt=im.alt; pre.onload=go; pre.onerror=go; setTimeout(()=>lbImg.classList.remove('swap'),120); }
-    lbCount.textContent=pad(cur+1)+' / '+pad(visible.length);
-    lbCat.textContent=catLabel[it.dataset.cat]||'';
-    lbCap.textContent=im.alt;
-    lbExif.textContent=it.dataset.exif||'';
-    [1,-1].forEach(d=>{ const n=visible[(cur+d+visible.length)%visible.length]; if(n){ const p=new Image(); p.src=n.querySelector('img').dataset.full; } });
-  }
-  function open(it){
-    let i=visible.indexOf(it);
-    if(i<0){ applyFilter('all'); visible=items.slice(); i=items.indexOf(it); }
-    lastFocus=document.activeElement; lb.hidden=false; root.style.overflow='hidden';
-    requestAnimationFrame(()=>lb.classList.add('open'));
-    show(i); $('#lbClose').focus();
-  }
-  function close(){ lb.classList.remove('open'); root.style.overflow=''; setTimeout(()=>{lb.hidden=true;},reduce?0:300); lastFocus&&lastFocus.focus&&lastFocus.focus(); }
-  items.forEach(it=>it.querySelector('.g-open').addEventListener('click',()=>open(it)));
-  frames.forEach(f=>f.addEventListener('click',()=>{ const it=items.find(i=>i.dataset.slug===f.dataset.slug); it&&open(it); }));
-  $('#lbClose').addEventListener('click',close);
-  $('#lbPrev').addEventListener('click',()=>show(cur-1));
-  $('#lbNext').addEventListener('click',()=>show(cur+1));
-  lb.addEventListener('click',e=>{ if(e.target===lb||e.target.id==='lbStage') close(); });
-  addEventListener('keydown',e=>{
-    if(lb.hidden) { if(e.key==='Escape' && menuBtn.getAttribute('aria-expanded')==='true') setMenu(false); return; }
-    if(e.key==='Escape') close();
-    else if(e.key==='ArrowRight') show(cur+1);
-    else if(e.key==='ArrowLeft') show(cur-1);
-    else if(e.key==='Tab'){ const f=[...lb.querySelectorAll('button')]; const a=f.indexOf(document.activeElement); if(e.shiftKey && a<=0){e.preventDefault();f[f.length-1].focus();} else if(!e.shiftKey && a===f.length-1){e.preventDefault();f[0].focus();} }
-  });
-  let sx=null,sy0=null;
-  $('#lbStage').addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy0=e.touches[0].clientY;},{passive:true});
-  $('#lbStage').addEventListener('touchend',e=>{ if(sx===null) return; const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy0; if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)) show(cur+(dx<0?1:-1)); sx=null; });
-
-  /* quote: letters ride a U-curve into place as you scroll */
-  const q=$('#qText');
-  if(q && !reduce){
-    const chars=[];
-    (function split(node){
-      [...node.childNodes].forEach(n=>{
-        if(n.nodeType===3){
-          const frag=document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(tok=>{
-            if(!tok) return;
-            if(/^\s+$/.test(tok)){ frag.appendChild(document.createTextNode(' ')); return; }
-            const w=document.createElement('span'); w.className='w';
-            [...tok].forEach(c=>{const s=document.createElement('span');s.className='qc';s.textContent=c;w.appendChild(s);chars.push(s);});
-            frag.appendChild(w);
-          });
-          n.replaceWith(frag);
-        } else if(n.nodeType===1) split(n);
-      });
-    })(q);
-    q.setAttribute('aria-label', q.textContent);
-    const N=chars.length, mid=(N-1)/2;
-    const ease=t=>1-Math.pow(1-t,3);
-    function qUpdate(){
-      const r=q.getBoundingClientRect();
-      const p=Math.min(1,Math.max(0,(innerHeight - r.top)/(innerHeight*.6)));
-      chars.forEach((c,i)=>{
-        const centrality=1-Math.abs(i-mid)/mid;           /* 0 at edges, 1 in the middle */
-        const local=Math.min(1,Math.max(0,(p - centrality*.45)/.55));
-        c.style.transform='translateY('+((1-ease(local))*0.55).toFixed(3)+'em)';
-      });
-    }
-    addEventListener('scroll',()=>requestAnimationFrame(qUpdate),{passive:true}); addEventListener('resize',qUpdate); qUpdate();
-  }
-
-  /* barrel links */
-  $$('.barrel').forEach(a=>{
-    const label=a.dataset.label; a.textContent='';
-    a.setAttribute('aria-label',label);
-    const l=document.createElement('span'); l.className='bk l'; l.textContent='['; l.setAttribute('aria-hidden','true');
-    const w=document.createElement('span'); w.className='word'; w.setAttribute('aria-hidden','true');
-    [...label].forEach((c,i)=>{ const b=document.createElement('span'); b.className='bc'; b.style.setProperty('--i',i); b.innerHTML='<span></span><span></span>'; b.children[0].textContent=c; b.children[1].textContent=c; w.appendChild(b); });
-    const r=document.createElement('span'); r.className='bk r'; r.textContent=']'; r.setAttribute('aria-hidden','true');
-    a.append(l,w,r);
-  });
-
-  /* copy buttons */
-  $$('.copy').forEach(b=>b.addEventListener('click',()=>{
-    const v=b.dataset.copy;
-    const ok=()=>{ b.textContent='Copié'; b.classList.add('ok'); setTimeout(()=>{b.textContent='Copier';b.classList.remove('ok');},1800); };
-    const fallback=()=>{ const el=b.previousElementSibling; const range=document.createRange(); range.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(range); b.textContent='Sélectionné'; setTimeout(()=>{b.textContent='Copier';},1800); };
-    try{ navigator.clipboard.writeText(v).then(ok,fallback); }catch(e){ fallback(); }
-  }));
-
-  /* Dakar clock */
-  const clock=$('#clock');
-  function tickClock(){ try{ clock.textContent=new Intl.DateTimeFormat('fr-FR',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'Africa/Dakar'}).format(new Date())+' (GMT+0)'; }catch(e){} }
-  tickClock(); setInterval(tickClock,1000);
-  $('#year').textContent=new Date().getFullYear();
-
-  /* custom cursor */
-  if(fine && !reduce){
-    root.classList.add('has-cursor');
-    const cur$=$('#cursor'), dot=$('#cDot'), ring=$('#cRing'), lab=$('#cLabel');
-    let x=-100,y=-100,rx=-100,ry=-100;
-    addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;if(rx<-50){rx=x;ry=y;}cur$.classList.add('live');},{passive:true});
-    document.addEventListener('mouseover',e=>{
-      const z=e.target.closest('.g-open,.pf'); const l=e.target.closest('a,button,[data-cursor]');
-      cur$.classList.toggle('big',!!z); cur$.classList.toggle('link',!z&&!!l);
-      if(z) lab.textContent='Voir';
-    });
-    document.addEventListener('mouseleave',()=>{cur$.classList.remove('live');});
-    (function cl(){ rx=lerp(rx,x,.18); ry=lerp(ry,y,.18); dot.style.transform=`translate3d(${x}px,${y}px,0)`; ring.style.transform=`translate3d(${rx}px,${ry}px,0)`; requestAnimationFrame(cl); })();
-  }
-})();
-</script>
-
-</body></html>
+</html>
