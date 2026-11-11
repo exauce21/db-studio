@@ -697,7 +697,7 @@ button {
 .mq-group .mk {
   width: clamp(16px, 1.8vw, 24px);
   height: clamp(16px, 1.8vw, 24px);
-  border-left: 10px solid var(--accent);
+  border-right: 10px solid var(--accent);
   border-bottom: 10px solid var(--accent);
   flex: none;
 }
@@ -1439,7 +1439,7 @@ button {
 
 /* ───────── contact / footer ───────── */
 .contact {
-  padding-top: clamp(100px, 13vw, 200px);
+  padding-top: clamp(10px, 13vw, 10px);
   padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--line);
   position: relative;
@@ -1498,10 +1498,9 @@ a.c-value:hover {
 .copy {
   min-height: 34px;
   padding: 0 12px;
-  border-radius: 999px;
   border: 1px solid var(--line-2);
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: 8px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--mute);
