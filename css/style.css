@@ -1061,7 +1061,7 @@ button {
   background: var(--bg-2);
   padding: clamp(14px, 1.8vw, 24px);
   position: relative;
-  border: 1px solid var(--line);
+  
 }
 .sheet-edge {
   display: flex;
@@ -1099,6 +1099,15 @@ button {
   letter-spacing: 0.12em;
   color: var(--mute-2);
   margin-top: 5px;
+}
+.sheet-solo {
+  grid-template-columns: minmax(0, 1fr);
+}
+.sheet-solo .fr {
+  aspect-ratio: 4/5;
+}
+.sheet-solo img {
+  filter: none;
 }
 .sheet-grid .sel figcaption {
   color: var(--accent);
@@ -1261,7 +1270,7 @@ button {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 5px 9px;
-  border: 1px solid var(--line);
+  
   border-radius: 999px;
   color: var(--mute);
 }
@@ -1311,7 +1320,7 @@ button {
   gap: clamp(20px, 3vw, 44px);
   align-items: center;
   padding: clamp(20px, 2.6vw, 36px);
-  border: 1px solid var(--line);
+  
   background: var(--bg-2);
   transition: border-color 0.4s;
   min-width: 0;
@@ -1356,7 +1365,7 @@ button {
 .cover-a {
   background: var(--bg-3);
   color: var(--paper);
-  border: 1px solid var(--line);
+  
 }
 .cover-b {
   background: var(--accent);
@@ -1444,6 +1453,9 @@ button {
   border-top: 1px solid var(--line);
   position: relative;
   overflow: hidden;
+}
+.contact > .wrap {
+  max-width: none;
 }
 .c-big {
   margin: 0;
