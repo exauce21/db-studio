@@ -1,379 +1,743 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>David Banga Studio · Photographe à Dakar</title>
-<meta name="description" content="David Banga, photographe et infographe ivoirien basé à Dakar (Sénégal). Portraits, séances studio, portraits professionnels, reportages institutionnels et événementiels.">
-<meta name="theme-color" content="#000000">
-<link rel="icon" type="image/png" href="assets/logo/favicon.png">
-<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
-<!-- Partage (WhatsApp, Facebook, LinkedIn) : remplacez VOTRE-DOMAINE par l'adresse du site une fois en ligne -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="David Banga Studio · Photographe à Dakar">
-<meta property="og:description" content="David Banga, photographe et infographe ivoirien basé à Dakar (Sénégal). Portraits, séances studio, portraits professionnels, reportages institutionnels et événementiels.">
-<meta property="og:image" content="https://VOTRE-DOMAINE/assets/og-image.jpg">
-<meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>David Banga Studio · Photographe à Dakar</title>
+  <meta name="description"
+    content="David Banga, photographe et infographe ivoirien basé à Dakar (Sénégal). Portraits, séances studio, portraits professionnels, reportages institutionnels et événementiels.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <!-- Partage (WhatsApp, Facebook, LinkedIn) : remplacez VOTRE-DOMAINE par l'adresse du site une fois en ligne -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="David Banga Studio · Photographe à Dakar">
+  <meta property="og:description"
+    content="David Banga, photographe et infographe ivoirien basé à Dakar (Sénégal). Portraits, séances studio, portraits professionnels, reportages institutionnels et événementiels.">
+  <meta property="og:image" content="https://VOTRE-DOMAINE/assets/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
-<noscript><style>.loader{display:none!important}</style></noscript>
-<div class="grain" aria-hidden="true"></div>
+  <noscript>
+    <style>
+      .loader {
+        display: none !important
+      }
+    </style>
+  </noscript>
+  <div class="grain" aria-hidden="true"></div>
 
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-top mono"><span>David Banga Studio</span><span>Dakar — Sénégal</span></div>
-  <div class="loader-mid"><img src="assets/logo/monogram-dark.png" alt="" width="458" height="338"></div>
-  <div class="loader-bot">
-    <span class="mono loader-label">Développement<br>des images</span>
-    <span class="loader-count" id="loaderCount">000</span>
-  </div>
-  <span class="loader-bar" id="loaderBar"></span>
-</div>
-
-<header class="head" id="head">
-  <div class="wrap head-in">
-    <a class="brand" href="#accueil" aria-label="David Banga Studio, retour à l'accueil"><img src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405" height="310"></a>
-    <nav class="nav mono" aria-label="Navigation principale">
-      <a href="#realisations">Réalisations</a>
-      <a href="#a-propos">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#portfolios">Portfolios PDF</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn- head-cta" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener">Réserver <span class="arr">→</span></a>
-    <button class="menu-btn mono" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu<span class="bars" aria-hidden="true"></span></button>
-  </div>
-</header>
-
-<nav class="mnav" id="mnav" aria-label="Menu mobile">
-  <ol>
-    <li><a href="#realisations"><small>01</small>Réalisations</a></li>
-    <li><a href="#a-propos"><small>02</small>À propos</a></li>
-    <li><a href="#services"><small>03</small>Services</a></li>
-    <li><a href="#portfolios"><small>04</small>Portfolios</a></li>
-    <li><a href="#contact"><small>05</small>Contact</a></li>
-  </ol>
-  <div class="mnav-foot mono">
-    <a href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener">WhatsApp</a>
-    <a href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener">Behance</a>
-  </div>
-</nav>
-
-<main>
-<!-- ═════════ HERO ═════════ -->
-<section class="hero" id="accueil" aria-label="Introduction">
-  <div class="field" id="field">
-    <div class="pf" data-depth="0.06" data-slug="euromed-rge2411" style="--w:17%;--t:7%;--l:-2%;--ar:675/900;--blur:1.6px;--br:0.5;--mw:34%;--mt:10%;--ml:-6%"><div class="pf-in" style="--ph:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" width="675" height="900" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf m-hide" data-depth="0.15" data-slug="m0a0598" style="--w:10%;--t:13%;--l:22%;--ar:675/900;--blur:0.6px;--br:0.55"><div class="pf-in" style="--ph:#403d3a"><img src="assets/photos/m0a0598-sm.webp" alt="" width="675" height="900" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf" data-depth="0.07" data-slug="baraka-gate1909" style="--w:22%;--t:9%;--r:-4%;--ar:900/720;--blur:1.4px;--br:0.5;--mw:46%;--mt:12%;--mr:-12%"><div class="pf-in" style="--ph:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" width="900" height="720" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf" data-depth="0.2" data-slug="daniel-banam0543" style="--w:16%;--t:50%;--l:4%;--ar:900/600;--blur:0px;--br:0.62;--mw:40%;--mt:auto;--mb:8%;--ml:-10%"><div class="pf-in" style="--ph:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" width="900" height="600" decoding="async" fetchpriority="high"></div></div>
-    <div class="pf m-hide" data-depth="0.1" data-slug="ben-1814" style="--w:12%;--b:-10%;--l:19%;--ar:720/900;--blur:1px;--br:0.5"><div class="pf-in" style="--ph:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" width="720" height="900" decoding="async"></div></div>
-    <div class="pf" data-depth="0.17" data-slug="2n9a0017" style="--w:10%;--b:-14%;--l:46%;--ar:600/900;--blur:0.4px;--br:0.55;--mw:26%;--mb:-5%;--ml:37%"><div class="pf-in" style="--ph:#725057"><img src="assets/photos/2n9a0017-sm.webp" alt="" width="600" height="900" decoding="async"></div></div>
-    <div class="pf" data-depth="0.22" data-slug="wil02129" style="--w:12%;--t:44%;--r:5%;--ar:675/900;--blur:0px;--br:0.62;--mw:30%;--mt:auto;--mb:9%;--mr:-7%"><div class="pf-in" style="--ph:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" width="675" height="900" decoding="async"></div></div>
-    <div class="pf m-hide" data-depth="0.12" data-slug="mandeleine-abou1100" style="--w:11%;--b:-8%;--r:22%;--ar:720/900;--blur:1px;--br:0.5"><div class="pf-in" style="--ph:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt="" width="720" height="900" decoding="async"></div></div>
-    <div class="pf m-hide" data-depth="0.18" data-slug="256a8876-david-banga-studio" style="--w:8%;--t:5%;--l:61%;--ar:624/900;--blur:0.3px;--br:0.55"><div class="pf-in" style="--ph:#383034"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" width="624" height="900" decoding="async"></div></div>
-  </div>
-  <div class="hero-content wrap">
-    <p class="hero-sub">Portraits, séances studio  <em> et reportages.</em></p>
-    <h1 class="hero-name">
-      <span class="hero-logo-wrap">
-        <img class="hero-logo" src="assets/logo/logo-blanc.svg" alt="David Banga" width="448" height="98">
-      </span>
-    </h1>
-    <div class="hero-ctas">
-      <a class="btn" href="#realisations" data-cursor="link">Voir les réalisations <span class="arr">↓</span></a>
-      <a class="btn" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">Réserver une séance <span class="arr">→</span></a>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-top mono"><span>David Banga Studio</span><span>Dakar — Sénégal</span></div>
+    <div class="loader-mid"><img src="assets/logo/monogram-dark.png" alt="" width="458" height="338"></div>
+    <div class="loader-bot">
+      <span class="mono loader-label">Développement<br>des images</span>
+      <span class="loader-count" id="loaderCount">000</span>
     </div>
+    <span class="loader-bar" id="loaderBar"></span>
   </div>
-  <div class="hero-hud wrap mono" aria-hidden="true">
-    <span class="coords"></span>
-    <span class="scroll">Défiler <i></i></span>
-  </div>
-</section>
 
-<!-- ═════════ RÉALISATIONS ═════════ -->
-<section class="sec" id="realisations" aria-labelledby="t-real">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Réalisations — 30 images</p>
-        <h2 class="h2" id="t-real">Des visages,<br><span class="serif-i ">des histoires.</span></h2>
+  <header class="head" id="head">
+    <div class="wrap head-in">
+      <a class="brand" href="#accueil" aria-label="David Banga Studio, retour à l'accueil"><img
+          src="assets/logo/logo-horizontal-white.png" alt="David Banga Studio" width="1405" height="310"></a>
+      <nav class="nav mono" aria-label="Navigation principale">
+        <a href="#realisations">Réalisations</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#portfolios">Portfolios PDF</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn- head-cta"
+        href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+        target="_blank" rel="noopener">Réserver <span class="arr">→</span></a>
+      <button class="menu-btn mono" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu<span class="bars"
+          aria-hidden="true"></span></button>
+    </div>
+  </header>
+
+  <nav class="mnav" id="mnav" aria-label="Menu mobile">
+    <ol>
+      <li><a href="#realisations"><small>01</small>Réalisations</a></li>
+      <li><a href="#a-propos"><small>02</small>À propos</a></li>
+      <li><a href="#services"><small>03</small>Services</a></li>
+      <li><a href="#portfolios"><small>04</small>Portfolios</a></li>
+      <li><a href="#contact"><small>05</small>Contact</a></li>
+    </ol>
+    <div class="mnav-foot mono">
+      <a href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+        target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener">Behance</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═════════ HERO ═════════ -->
+    <section class="hero" id="accueil" aria-label="Introduction">
+      <div class="field" id="field">
+        <div class="pf" data-depth="0.06" data-slug="euromed-rge2411"
+          style="--w:17%;--t:7%;--l:-2%;--ar:675/900;--blur:1.6px;--br:0.5;--mw:34%;--mt:10%;--ml:-6%">
+          <div class="pf-in" style="--ph:#57410f"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" width="675"
+              height="900" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.15" data-slug="m0a0598"
+          style="--w:10%;--t:13%;--l:22%;--ar:675/900;--blur:0.6px;--br:0.55">
+          <div class="pf-in" style="--ph:#403d3a"><img src="assets/photos/m0a0598-sm.webp" alt="" width="675"
+              height="900" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf" data-depth="0.07" data-slug="baraka-gate1909"
+          style="--w:22%;--t:9%;--r:-4%;--ar:900/720;--blur:1.4px;--br:0.5;--mw:46%;--mt:12%;--mr:-12%">
+          <div class="pf-in" style="--ph:#3d3434"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" width="900"
+              height="720" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf" data-depth="0.2" data-slug="daniel-banam0543"
+          style="--w:16%;--t:50%;--l:4%;--ar:900/600;--blur:0px;--br:0.62;--mw:40%;--mt:auto;--mb:8%;--ml:-10%">
+          <div class="pf-in" style="--ph:#696969"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" width="900"
+              height="600" decoding="async" fetchpriority="high"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.1" data-slug="ben-1814"
+          style="--w:12%;--b:-10%;--l:19%;--ar:720/900;--blur:1px;--br:0.5">
+          <div class="pf-in" style="--ph:#252822"><img src="assets/photos/ben-1814-sm.webp" alt="" width="720"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf" data-depth="0.17" data-slug="2n9a0017"
+          style="--w:10%;--b:-14%;--l:46%;--ar:600/900;--blur:0.4px;--br:0.55;--mw:26%;--mb:-5%;--ml:37%">
+          <div class="pf-in" style="--ph:#725057"><img src="assets/photos/2n9a0017-sm.webp" alt="" width="600"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf" data-depth="0.22" data-slug="wil02129"
+          style="--w:12%;--t:44%;--r:5%;--ar:675/900;--blur:0px;--br:0.62;--mw:30%;--mt:auto;--mb:9%;--mr:-7%">
+          <div class="pf-in" style="--ph:#605a5e"><img src="assets/photos/wil02129-sm.webp" alt="" width="675"
+              height="900" decoding="async"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.12" data-slug="mandeleine-abou1100"
+          style="--w:11%;--b:-8%;--r:22%;--ar:720/900;--blur:1px;--br:0.5">
+          <div class="pf-in" style="--ph:#564a3c"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt=""
+              width="720" height="900" decoding="async"></div>
+        </div>
+        <div class="pf m-hide" data-depth="0.18" data-slug="256a8876-david-banga-studio"
+          style="--w:8%;--t:5%;--l:61%;--ar:624/900;--blur:0.3px;--br:0.55">
+          <div class="pf-in" style="--ph:#383034"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt=""
+              width="624" height="900" decoding="async"></div>
+        </div>
       </div>
-      <p class="sec-lead">Une sélection de portraits, de séances studio et de reportages. Choisissez une série pour filtrer la galerie, puis touchez une image pour l'agrandir.</p>
-    </div>
-
-    <ul class="series" id="series">
-      <li><button class="s-row" type="button" data-filter="studio" aria-controls="gallery"><span class="s-name">Portraits studio</span><span class="s-desc">Lumière maîtrisée, fonds unis, personnalité au premier plan.</span><span class="s-count">08 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" loading="lazy" width="624" height="900"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" loading="lazy" width="900" height="600"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/miss-mister-bde0532-sm.webp" alt="" loading="lazy" width="720" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="corporate" aria-controls="gallery"><span class="s-name">Portraits professionnels</span><span class="s-desc">Dirigeants, cadres et entrepreneurs, pour une image crédible.</span><span class="s-count">05 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/mandeleine-abou1100-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/2n9a0258-sm.webp" alt="" loading="lazy" width="900" height="720"><img src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp" alt="" loading="lazy" width="720" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="mode" aria-controls="gallery"><span class="s-name">Mode &amp; lifestyle</span><span class="s-desc">Séances créatives, stylisme et attitude, en studio ou en extérieur.</span><span class="s-count">06 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/euromed-rge2411-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/ben-1910-sm.webp" alt="" loading="lazy" width="720" height="900"><img src="assets/photos/2n9a8702-sm.webp" alt="" loading="lazy" width="600" height="900"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="famille" aria-controls="gallery"><span class="s-name">Couples &amp; famille</span><span class="s-desc">Couples, familles et grossesse : les liens qui comptent.</span><span class="s-count">05 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/baraka-gate1909-sm.webp" alt="" loading="lazy" width="900" height="720"><img src="assets/photos/linda0930-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/esaie-lind0846-sm.webp" alt="" loading="lazy" width="600" height="900"><img src="assets/photos/2n9a9317-sm.webp" alt="" loading="lazy" width="900" height="600"></span></button></li>
-      <li><button class="s-row" type="button" data-filter="evenements" aria-controls="gallery"><span class="s-name">Mariages &amp; événements</span><span class="s-desc">Préparatifs, cérémonies et émotions prises sur le vif.</span><span class="s-count">06 images <span class="arr" aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img src="assets/photos/m0a0598-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/wil02577-sm.webp" alt="" loading="lazy" width="675" height="900"><img src="assets/photos/2n9a0017-sm.webp" alt="" loading="lazy" width="600" height="900"><img src="assets/photos/m0a0571-sm.webp" alt="" loading="lazy" width="675" height="900"></span></button></li>
-    </ul>
-
-    <div class="g-zone">
-    <div class="filters" id="filters" role="group" aria-label="Filtrer la galerie">
-      <button class="chip" type="button" data-filter="all" data-label="Toutes les images" aria-pressed="true">Tout <sup>30</sup></button>
-      <button class="chip" type="button" data-filter="studio" data-label="Portrait studio" aria-pressed="false">Studio <sup>8</sup></button>
-      <button class="chip" type="button" data-filter="corporate" data-label="Portrait professionnel" aria-pressed="false">Corporate <sup>5</sup></button>
-      <button class="chip" type="button" data-filter="mode" data-label="Mode &amp; lifestyle" aria-pressed="false">Mode <sup>6</sup></button>
-      <button class="chip" type="button" data-filter="famille" data-label="Couples &amp; famille" aria-pressed="false">Couples &amp; famille <sup>5</sup></button>
-      <button class="chip" type="button" data-filter="evenements" data-label="Mariages &amp; événements" aria-pressed="false">Mariages &amp; événements <sup>6</sup></button>
-    </div>
-
-    <div class="gallery" id="gallery">
-      <figure class="g-item" data-cat="mode" data-slug="euromed-rge2411"><button class="g-open" type="button" style="--ph:#57410f;--ar:675/900" aria-label="Agrandir : Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune"><img src="assets/photos/euromed-rge2411-sm.webp" data-full="assets/photos/euromed-rge2411.webp" alt="Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°01</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="m0a0598" data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/1600 s · ISO 100"><button class="g-open" type="button" style="--ph:#403d3a;--ar:675/900" aria-label="Agrandir : Mariée souriante arrivant parmi les invités, en lumière naturelle"><img src="assets/photos/m0a0598-sm.webp" data-full="assets/photos/m0a0598.webp" alt="Mariée souriante arrivant parmi les invités, en lumière naturelle" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°02</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="baraka-gate1909"><button class="g-open" type="button" style="--ph:#3d3434;--ar:900/720" aria-label="Agrandir : Couple enlacé en séance studio, fond gris bleuté"><img src="assets/photos/baraka-gate1909-sm.webp" data-full="assets/photos/baraka-gate1909.webp" alt="Couple enlacé en séance studio, fond gris bleuté" width="900" height="720" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°03</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="256a8876-david-banga-studio"><button class="g-open" type="button" style="--ph:#383034;--ar:624/900" aria-label="Agrandir : Homme souriant tenant un casque audio, fond noir"><img src="assets/photos/256a8876-david-banga-studio-sm.webp" data-full="assets/photos/256a8876-david-banga-studio.webp" alt="Homme souriant tenant un casque audio, fond noir" width="624" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°04</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="mandeleine-abou1100"><button class="g-open" type="button" style="--ph:#564a3c;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;une femme en tailleur, fond beige"><img src="assets/photos/mandeleine-abou1100-sm.webp" data-full="assets/photos/mandeleine-abou1100.webp" alt="Portrait professionnel d&#x27;une femme en tailleur, fond beige" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°05</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="ben-1814"><button class="g-open" type="button" style="--ph:#252822;--ar:720/900" aria-label="Agrandir : Femme en veste en jean et lunettes de soleil, fond vert texturé"><img src="assets/photos/ben-1814-sm.webp" data-full="assets/photos/ben-1814.webp" alt="Femme en veste en jean et lunettes de soleil, fond vert texturé" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°06</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="daniel-banam0543" data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button" style="--ph:#696969;--ar:900/600" aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles"><img src="assets/photos/daniel-banam0543-sm.webp" data-full="assets/photos/daniel-banam0543.webp" alt="Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°07</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="wil02577"><button class="g-open" type="button" style="--ph:#695d54;--ar:675/900" aria-label="Agrandir : Mariée en robe blanche tenant un bouquet de roses"><img src="assets/photos/wil02577-sm.webp" data-full="assets/photos/wil02577.webp" alt="Mariée en robe blanche tenant un bouquet de roses" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°08</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="linda0930"><button class="g-open" type="button" style="--ph:#606060;--ar:675/900" aria-label="Agrandir : Portrait de grossesse en noir et blanc, robe noire ajustée"><img src="assets/photos/linda0930-sm.webp" data-full="assets/photos/linda0930.webp" alt="Portrait de grossesse en noir et blanc, robe noire ajustée" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°09</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="2n9a0258"><button class="g-open" type="button" style="--ph:#60585d;--ar:900/720" aria-label="Agrandir : Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives"><img src="assets/photos/2n9a0258-sm.webp" data-full="assets/photos/2n9a0258.webp" alt="Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives" width="900" height="720" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°10</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="wil02129"><button class="g-open" type="button" style="--ph:#605a5e;--ar:675/900" aria-label="Agrandir : Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue"><img src="assets/photos/wil02129-sm.webp" data-full="assets/photos/wil02129.webp" alt="Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°11</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a0017"><button class="g-open" type="button" style="--ph:#725057;--ar:600/900" aria-label="Agrandir : Femme en tenue de cérémonie bordeaux et voile assorti"><img src="assets/photos/2n9a0017-sm.webp" data-full="assets/photos/2n9a0017.webp" alt="Femme en tenue de cérémonie bordeaux et voile assorti" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°12</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="esaie-lind0846"><button class="g-open" type="button" style="--ph:#43383e;--ar:600/900" aria-label="Agrandir : Couple élégant en tenue noire, fond lilas"><img src="assets/photos/esaie-lind0846-sm.webp" data-full="assets/photos/esaie-lind0846.webp" alt="Couple élégant en tenue noire, fond lilas" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°13</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="ben-1910"><button class="g-open" type="button" style="--ph:#242727;--ar:720/900" aria-label="Agrandir : Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé"><img src="assets/photos/ben-1910-sm.webp" data-full="assets/photos/ben-1910.webp" alt="Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°14</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0532"><button class="g-open" type="button" style="--ph:#37231a;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun"><img src="assets/photos/miss-mister-bde0532-sm.webp" data-full="assets/photos/miss-mister-bde0532.webp" alt="Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°15</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="2n9a9401"><button class="g-open" type="button" style="--ph:#505a5b;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret"><img src="assets/photos/2n9a9401-sm.webp" data-full="assets/photos/2n9a9401.webp" alt="Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°16</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="m0a0571" data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/160 s · ISO 100"><button class="g-open" type="button" style="--ph:#463635;--ar:675/900" aria-label="Agrandir : Mariée en peignoir de satin pendant les préparatifs"><img src="assets/photos/m0a0571-sm.webp" data-full="assets/photos/m0a0571.webp" alt="Mariée en peignoir de satin pendant les préparatifs" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°17</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="2n9a9317" data-exif="Canon EOS 7D Mark II · 50 mm · ƒ/3,2 · 1/400 s · ISO 100"><button class="g-open" type="button" style="--ph:#565234;--ar:900/600" aria-label="Agrandir : Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties"><img src="assets/photos/2n9a9317-sm.webp" data-full="assets/photos/2n9a9317.webp" alt="Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°18</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="2n9a8702"><button class="g-open" type="button" style="--ph:#5e6663;--ar:600/900" aria-label="Agrandir : Jeune homme en lunettes de soleil et veste verte, en extérieur"><img src="assets/photos/2n9a8702-sm.webp" data-full="assets/photos/2n9a8702.webp" alt="Jeune homme en lunettes de soleil et veste verte, en extérieur" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°19</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="david-banga-2"><button class="g-open" type="button" style="--ph:#616063;--ar:720/900" aria-label="Agrandir : Jeune homme en col roulé bleu marine assis sur un tabouret violet"><img src="assets/photos/david-banga-2-sm.webp" data-full="assets/photos/david-banga-2.webp" alt="Jeune homme en col roulé bleu marine assis sur un tabouret violet" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°20</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="sephis-shooting-portrait2195"><button class="g-open" type="button" style="--ph:#453c35;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun"><img src="assets/photos/sephis-shooting-portrait2195-sm.webp" data-full="assets/photos/sephis-shooting-portrait2195.webp" alt="Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°21</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a9591"><button class="g-open" type="button" style="--ph:#4d4d4d;--ar:900/600" aria-label="Agrandir : Étreinte émouvante lors d&#x27;un événement, en noir et blanc"><img src="assets/photos/2n9a9591-sm.webp" data-full="assets/photos/2n9a9591.webp" alt="Étreinte émouvante lors d&#x27;un événement, en noir et blanc" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°22</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="famille" data-slug="denise-marguerite-mane-sayana-c2"><button class="g-open" type="button" style="--ph:#494040;--ar:720/900" aria-label="Agrandir : Portrait de grossesse, robe blanche fluide sur fond brun"><img src="assets/photos/denise-marguerite-mane-sayana-c2-sm.webp" data-full="assets/photos/denise-marguerite-mane-sayana-c2.webp" alt="Portrait de grossesse, robe blanche fluide sur fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°23</span><span>Couples &amp; famille</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="wil02219"><button class="g-open" type="button" style="--ph:#676667;--ar:675/900" aria-label="Agrandir : Jeune femme riant, assise au sol en chemise lilas et jean"><img src="assets/photos/wil02219-sm.webp" data-full="assets/photos/wil02219.webp" alt="Jeune femme riant, assise au sol en chemise lilas et jean" width="675" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°24</span><span>Mode &amp; lifestyle</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="5q2a1216"><button class="g-open" type="button" style="--ph:#636c6d;--ar:720/900" aria-label="Agrandir : Portrait d&#x27;une femme souriante au voile turquoise à motifs"><img src="assets/photos/5q2a1216-sm.webp" data-full="assets/photos/5q2a1216.webp" alt="Portrait d&#x27;une femme souriante au voile turquoise à motifs" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°25</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="corporate" data-slug="ben-0023"><button class="g-open" type="button" style="--ph:#25242f;--ar:720/900" aria-label="Agrandir : Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"><img src="assets/photos/ben-0023-sm.webp" data-full="assets/photos/ben-0023.webp" alt="Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°26</span><span>Portrait professionnel</span></span></button></figure>
-      <figure class="g-item" data-cat="evenements" data-slug="2n9a0120"><button class="g-open" type="button" style="--ph:#6c4f51;--ar:600/900" aria-label="Agrandir : Femme en robe de soirée bordeaux brodée, devant des rideaux clairs"><img src="assets/photos/2n9a0120-sm.webp" data-full="assets/photos/2n9a0120.webp" alt="Femme en robe de soirée bordeaux brodée, devant des rideaux clairs" width="600" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°27</span><span>Mariages &amp; événements</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="daniel-banam0537" data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button" style="--ph:#6e6e6e;--ar:900/600" aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio"><img src="assets/photos/daniel-banam0537-sm.webp" data-full="assets/photos/daniel-banam0537.webp" alt="Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio" width="900" height="600" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°28</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0542"><button class="g-open" type="button" style="--ph:#312a29;--ar:720/900" aria-label="Agrandir : Jeune homme souriant, pull vert noué sur les épaules, fond brun"><img src="assets/photos/miss-mister-bde0542-sm.webp" data-full="assets/photos/miss-mister-bde0542.webp" alt="Jeune homme souriant, pull vert noué sur les épaules, fond brun" width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°29</span><span>Portrait studio</span></span></button></figure>
-      <figure class="g-item" data-cat="mode" data-slug="wil02284"><button class="g-open" type="button" style="--ph:#605c5c;--ar:900/675" aria-label="Agrandir : Groupe d&#x27;amies complices allongées en studio, fond gris"><img src="assets/photos/wil02284-sm.webp" data-full="assets/photos/wil02284.webp" alt="Groupe d&#x27;amies complices allongées en studio, fond gris" width="900" height="675" loading="lazy" decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°30</span><span>Mode &amp; lifestyle</span></span></button></figure>
-    </div>
-    </div>
-
-    <div class="g-foot mono">
-      <span id="gStatus" aria-live="polite">30 images affichées</span>
-      <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-cursor="link">Plus de projets sur Behance ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═════════ QUOTE ═════════ -->
-<section class="quote" aria-label="Citation">
-  <div class="wrap">
-    <blockquote>
-      <p class="q-text" id="qText">Chaque photo raconte une histoire <span class="hl">unique.</span></p>
-      <cite class="q-cite mono">— David Banga</cite>
-    </blockquote>
-  </div>
-</section>
-
-<!-- ═════════ À PROPOS ═════════ -->
-<section class="sec sec-about" id="a-propos" aria-labelledby="t-about">
-  <div class="wrap about-grid">
-    <div class="sheet rv" aria-label="Portrait de David Banga">
-      <div class="sheet-edge mono"><span>DB Studio ▸ 400</span><span>Planche contact</span></div>
-      <div class="sheet-grid sheet-solo">
-        <figure class="sel"><div class="fr" style="--ph:#616063"><img src="assets/photos/david-banga-2-sm.webp" alt="Portrait de David Banga, col roulé bleu marine, assis sur un tabouret violet" loading="lazy" width="720" height="900"></div><figcaption><span>01</span><span>▸ 01A</span></figcaption></figure>
+      <div class="hero-content wrap">
+        <p class="hero-sub">Portraits, séances studio <em> et reportages.</em></p>
+        <h1 class="hero-name">
+          <span class="hero-logo-wrap">
+            <img class="hero-logo" src="assets/logo/logo-blanc.svg" alt="David Banga" width="448" height="98">
+          </span>
+        </h1>
+        <div class="hero-ctas">
+          <a class="btn" href="#realisations" data-cursor="link">Voir les réalisations <span class="arr">↓</span></a>
+          <a class="btn"
+            href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+            target="_blank" rel="noopener" data-cursor="link">Réserver une séance <span class="arr">→</span></a>
+        </div>
       </div>
-      <div class="sheet-note mono"><span>Sélection au crayon gras</span><span>Retouche ✓</span></div>
-    </div>
-
-    <div class="about-body">
-      <p class="eyebrow mono">À propos</p>
-      <h2 class="h2" id="t-about">David <span class="serif-i">Banga</span></h2>
-      <p class="about-lead">Huit années derrière l'objectif, avec un sens du détail au service de <em>moments authentiques et spontanés.</em></p>
-      <div class="about-text">
-        <p>Photographe professionnel, David découvre la photographie dès ses premières années universitaires. Au fil des années, il perfectionne son art grâce à de nombreuses collaborations enrichissantes et à des formations auprès de certains devanciers.</p>
-        <p>Il est convaincu que chaque photo raconte une histoire unique. Son objectif cherche donc à refléter la personnalité et les émotions de chacun de ses sujets.</p>
-        <p>Son équipement professionnel, avec des objectifs variés, lui permet de s'adapter à toutes les conditions de prise de vue. Adepte de la retouche numérique, il sublime ses clichés tout en restant réaliste et conservateur.</p>
+      <div class="hero-hud wrap mono" aria-hidden="true">
+        <span class="coords"></span>
+        <span class="scroll">Défiler <i></i></span>
       </div>
-      <dl class="facts">
-        <div><dt class="mono">Métier</dt><dd>Photographe · Infographe</dd></div>
-        <div><dt class="mono">Expérience</dt><dd>8 ans</dd></div>
-        <div><dt class="mono">Origine</dt><dd>Côte d'Ivoire</dd></div>
-        <div><dt class="mono">Basé à</dt><dd>Dakar, Sénégal</dd></div>
-      </dl>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ═════════ SERVICES ═════════ -->
-<section class="sec services" id="services" aria-labelledby="t-svc">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Services</p>
-        <h2 class="h2" id="t-svc">Une gamme <span class="serif-i ">complète.</span></h2>
-      </div>
-      <p class="sec-lead">Du studio au terrain, chaque prestation est pensée pour raconter votre histoire avec justesse.</p>
-    </div>
-    <div class="svc-grid">
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.6"/><path d="M8 6l1.5-2h5L16 6"/></svg></span>
-        <h3>Séances photo en studio</h3>
-        <p>Portraits individuels, couples, familles et maternité. Lumière et fond maîtrisés pour un rendu soigné.</p>
-        <div class="tags"><span>Portrait</span><span>Couple</span><span>Maternité</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.2-4.2 4.3-6 8-6s6.8 1.8 8 6"/></svg></span>
-        <h3>Portraits professionnels</h3>
-        <p>Photos corporate pour dirigeants, équipes et profils en ligne. Une image juste, à votre image.</p>
-        <div class="tags"><span>Corporate</span><span>Profil</span><span>Équipe</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M4 21h16"/></svg></span>
-        <h3>Reportages institutionnels</h3>
-        <p>Couverture d'entreprises, d'institutions, d'hôtels et de restaurants pour vos supports de communication.</p>
-        <div class="tags"><span>Entreprise</span><span>Hôtellerie</span><span>Gastronomie</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-        <h3>Reportages événementiels</h3>
-        <p>Mariages, cérémonies, soirées et événements d'entreprise. Les instants forts, sans mise en scène.</p>
-        <div class="tags"><span>Mariage</span><span>Cérémonie</span><span>Gala</span></div>
-      </article>
-      <article class="svc">
-        <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg></span>
-        <h3>Retouche &amp; infographie</h3>
-        <p>Retouche numérique réaliste et conservatrice, et création de supports graphiques pour prolonger vos images.</p>
-        <div class="tags"><span>Retouche</span><span>Infographie</span></div>
-      </article>
-      <a class="svc svc-cta" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">
-        <h3>Et bien plus <em>encore.</em></h3>
-        <p>Un besoin particulier ? Décrivez votre projet sur WhatsApp et recevez une proposition adaptée.</p>
-        <span class="go">Écrire sur WhatsApp <span aria-hidden="true">→</span></span>
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- ═════════ RÉALISATIONS ═════════ -->
+    <section class="sec" id="realisations" aria-labelledby="t-real">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Réalisations — 30 images</p>
+            <h2 class="h2" id="t-real">Des visages, des histoires.</h2>
+          </div>
+          <p class="sec-lead">Une sélection de portraits, de séances studio et de reportages. Choisissez une série pour
+            filtrer la galerie, puis touchez une image pour l'agrandir.</p>
+        </div>
 
-<!-- ═════════ PORTFOLIOS PDF ═════════ -->
-<section class="sec" id="portfolios" aria-labelledby="t-books">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <p class="eyebrow mono">Portfolios PDF</p>
-        <h2 class="h2" id="t-books">À feuilleter <span class="serif-i ">en entier.</span></h2>
-      </div>
-      <p class="sec-lead">Deux e-books à consulter en ligne ou à partager avec votre équipe.</p>
-    </div>
-    <div class="books">
-      <article class="book rv">
-        <div class="cover-wrap">
-          <div class="cover cover-a" aria-hidden="true">
-            <img class="c-photo" src="assets/photos/ben-0023-sm.webp" alt="" loading="lazy">
-            <div class="c-top"><span>E-book</span><span>Vol. 01</span></div>
-            <div class="c-title">Portfolio <em>officiel</em></div>
-            <div class="c-bot"><img class="c-mono" src="assets/logo/monogram-dark.png" alt=""><span>David Banga</span></div>
+        <ul class="series" id="series">
+          <li><button class="s-row" type="button" data-filter="studio" aria-controls="gallery"><span
+                class="s-name">Portraits studio</span><span class="s-desc">Lumière maîtrisée, fonds unis, personnalité
+                au premier plan.</span><span class="s-count">08 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/256a8876-david-banga-studio-sm.webp" alt="" loading="lazy" width="624"
+                  height="900"><img src="assets/photos/daniel-banam0543-sm.webp" alt="" loading="lazy" width="900"
+                  height="600"><img src="assets/photos/wil02129-sm.webp" alt="" loading="lazy" width="675"
+                  height="900"><img src="assets/photos/miss-mister-bde0532-sm.webp" alt="" loading="lazy" width="720"
+                  height="900"></span></button></li>
+          <li><button class="s-row" type="button" data-filter="corporate" aria-controls="gallery"><span
+                class="s-name">Portraits professionnels</span><span class="s-desc">Dirigeants, cadres et entrepreneurs,
+                pour une image crédible.</span><span class="s-count">05 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/mandeleine-abou1100-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/2n9a0258-sm.webp" alt="" loading="lazy" width="900" height="720"><img
+                  src="assets/photos/2n9a9401-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/sephis-shooting-portrait2195-sm.webp" alt="" loading="lazy" width="720"
+                  height="900"></span></button></li>
+          <li><button class="s-row" type="button" data-filter="mode" aria-controls="gallery"><span class="s-name">Mode
+                &amp; lifestyle</span><span class="s-desc">Séances créatives, stylisme et attitude, en studio ou en
+                extérieur.</span><span class="s-count">06 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/euromed-rge2411-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/ben-1814-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/ben-1910-sm.webp" alt="" loading="lazy" width="720" height="900"><img
+                  src="assets/photos/2n9a8702-sm.webp" alt="" loading="lazy" width="600" height="900"></span></button>
+          </li>
+          <li><button class="s-row" type="button" data-filter="famille" aria-controls="gallery"><span
+                class="s-name">Couples &amp; famille</span><span class="s-desc">Couples, familles et grossesse : les
+                liens qui comptent.</span><span class="s-count">05 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/baraka-gate1909-sm.webp" alt="" loading="lazy" width="900" height="720"><img
+                  src="assets/photos/linda0930-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/esaie-lind0846-sm.webp" alt="" loading="lazy" width="600" height="900"><img
+                  src="assets/photos/2n9a9317-sm.webp" alt="" loading="lazy" width="900" height="600"></span></button>
+          </li>
+          <li><button class="s-row" type="button" data-filter="evenements" aria-controls="gallery"><span
+                class="s-name">Mariages &amp; événements</span><span class="s-desc">Préparatifs, cérémonies et émotions
+                prises sur le vif.</span><span class="s-count">06 images <span class="arr"
+                  aria-hidden="true">→</span></span><span class="s-thumbs" aria-hidden="true"><img
+                  src="assets/photos/m0a0598-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/wil02577-sm.webp" alt="" loading="lazy" width="675" height="900"><img
+                  src="assets/photos/2n9a0017-sm.webp" alt="" loading="lazy" width="600" height="900"><img
+                  src="assets/photos/m0a0571-sm.webp" alt="" loading="lazy" width="675" height="900"></span></button>
+          </li>
+        </ul>
+
+        <div class="g-zone">
+          <div class="filters" id="filters" role="group" aria-label="Filtrer la galerie">
+            <button class="chip" type="button" data-filter="all" data-label="Toutes les images" aria-pressed="true">Tout
+              <sup>30</sup></button>
+            <button class="chip" type="button" data-filter="studio" data-label="Portrait studio"
+              aria-pressed="false">Studio <sup>8</sup></button>
+            <button class="chip" type="button" data-filter="corporate" data-label="Portrait professionnel"
+              aria-pressed="false">Corporate <sup>5</sup></button>
+            <button class="chip" type="button" data-filter="mode" data-label="Mode &amp; lifestyle"
+              aria-pressed="false">Mode <sup>6</sup></button>
+            <button class="chip" type="button" data-filter="famille" data-label="Couples &amp; famille"
+              aria-pressed="false">Couples &amp; famille <sup>5</sup></button>
+            <button class="chip" type="button" data-filter="evenements" data-label="Mariages &amp; événements"
+              aria-pressed="false">Mariages &amp; événements <sup>6</sup></button>
+          </div>
+
+          <div class="gallery" id="gallery">
+            <figure class="g-item" data-cat="mode" data-slug="euromed-rge2411"><button class="g-open" type="button"
+                style="--ph:#57410f;--ar:675/900"
+                aria-label="Agrandir : Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune"><img
+                  src="assets/photos/euromed-rge2411-sm.webp" data-full="assets/photos/euromed-rge2411.webp"
+                  alt="Jeune femme en lunettes de soleil assise à califourchon sur une chaise, fond jaune" width="675"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°01</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="m0a0598"
+              data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/1600 s · ISO 100"><button class="g-open"
+                type="button" style="--ph:#403d3a;--ar:675/900"
+                aria-label="Agrandir : Mariée souriante arrivant parmi les invités, en lumière naturelle"><img
+                  src="assets/photos/m0a0598-sm.webp" data-full="assets/photos/m0a0598.webp"
+                  alt="Mariée souriante arrivant parmi les invités, en lumière naturelle" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°02</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="baraka-gate1909"><button class="g-open" type="button"
+                style="--ph:#3d3434;--ar:900/720"
+                aria-label="Agrandir : Couple enlacé en séance studio, fond gris bleuté"><img
+                  src="assets/photos/baraka-gate1909-sm.webp" data-full="assets/photos/baraka-gate1909.webp"
+                  alt="Couple enlacé en séance studio, fond gris bleuté" width="900" height="720" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°03</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="256a8876-david-banga-studio"><button class="g-open"
+                type="button" style="--ph:#383034;--ar:624/900"
+                aria-label="Agrandir : Homme souriant tenant un casque audio, fond noir"><img
+                  src="assets/photos/256a8876-david-banga-studio-sm.webp"
+                  data-full="assets/photos/256a8876-david-banga-studio.webp"
+                  alt="Homme souriant tenant un casque audio, fond noir" width="624" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°04</span><span>Portrait
+                    studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="mandeleine-abou1100"><button class="g-open"
+                type="button" style="--ph:#564a3c;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;une femme en tailleur, fond beige"><img
+                  src="assets/photos/mandeleine-abou1100-sm.webp" data-full="assets/photos/mandeleine-abou1100.webp"
+                  alt="Portrait professionnel d&#x27;une femme en tailleur, fond beige" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°05</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="ben-1814"><button class="g-open" type="button"
+                style="--ph:#252822;--ar:720/900"
+                aria-label="Agrandir : Femme en veste en jean et lunettes de soleil, fond vert texturé"><img
+                  src="assets/photos/ben-1814-sm.webp" data-full="assets/photos/ben-1814.webp"
+                  alt="Femme en veste en jean et lunettes de soleil, fond vert texturé" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°06</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="daniel-banam0543"
+              data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#696969;--ar:900/600"
+                aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles"><img
+                  src="assets/photos/daniel-banam0543-sm.webp" data-full="assets/photos/daniel-banam0543.webp"
+                  alt="Portrait noir et blanc d&#x27;un jeune homme riant, casque audio sur les oreilles" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°07</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="wil02577"><button class="g-open" type="button"
+                style="--ph:#695d54;--ar:675/900"
+                aria-label="Agrandir : Mariée en robe blanche tenant un bouquet de roses"><img
+                  src="assets/photos/wil02577-sm.webp" data-full="assets/photos/wil02577.webp"
+                  alt="Mariée en robe blanche tenant un bouquet de roses" width="675" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°08</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="linda0930"><button class="g-open" type="button"
+                style="--ph:#606060;--ar:675/900"
+                aria-label="Agrandir : Portrait de grossesse en noir et blanc, robe noire ajustée"><img
+                  src="assets/photos/linda0930-sm.webp" data-full="assets/photos/linda0930.webp"
+                  alt="Portrait de grossesse en noir et blanc, robe noire ajustée" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°09</span><span>Couples &amp; famille</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="2n9a0258"><button class="g-open" type="button"
+                style="--ph:#60585d;--ar:900/720"
+                aria-label="Agrandir : Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives"><img
+                  src="assets/photos/2n9a0258-sm.webp" data-full="assets/photos/2n9a0258.webp"
+                  alt="Portrait professionnel d&#x27;un homme bras croisés, maillot aux couleurs vives" width="900"
+                  height="720" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°10</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="wil02129"><button class="g-open" type="button"
+                style="--ph:#605a5e;--ar:675/900"
+                aria-label="Agrandir : Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue"><img
+                  src="assets/photos/wil02129-sm.webp" data-full="assets/photos/wil02129.webp"
+                  alt="Portrait studio d&#x27;une jeune femme en chemise lilas, la main contre la joue" width="675"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°11</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a0017"><button class="g-open" type="button"
+                style="--ph:#725057;--ar:600/900"
+                aria-label="Agrandir : Femme en tenue de cérémonie bordeaux et voile assorti"><img
+                  src="assets/photos/2n9a0017-sm.webp" data-full="assets/photos/2n9a0017.webp"
+                  alt="Femme en tenue de cérémonie bordeaux et voile assorti" width="600" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°12</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="esaie-lind0846"><button class="g-open" type="button"
+                style="--ph:#43383e;--ar:600/900" aria-label="Agrandir : Couple élégant en tenue noire, fond lilas"><img
+                  src="assets/photos/esaie-lind0846-sm.webp" data-full="assets/photos/esaie-lind0846.webp"
+                  alt="Couple élégant en tenue noire, fond lilas" width="600" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°13</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="ben-1910"><button class="g-open" type="button"
+                style="--ph:#242727;--ar:720/900"
+                aria-label="Agrandir : Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé"><img
+                  src="assets/photos/ben-1910-sm.webp" data-full="assets/photos/ben-1910.webp"
+                  alt="Femme au foulard argenté et lunettes de soleil, fond bleu-vert texturé" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°14</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0532"><button class="g-open"
+                type="button" style="--ph:#37231a;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun"><img
+                  src="assets/photos/miss-mister-bde0532-sm.webp" data-full="assets/photos/miss-mister-bde0532.webp"
+                  alt="Portrait d&#x27;une jeune femme souriante aux longues tresses, fond brun" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°15</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="2n9a9401"><button class="g-open" type="button"
+                style="--ph:#505a5b;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret"><img
+                  src="assets/photos/2n9a9401-sm.webp" data-full="assets/photos/2n9a9401.webp"
+                  alt="Portrait professionnel d&#x27;une femme en blazer turquoise assise sur un tabouret" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°16</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="m0a0571"
+              data-exif="Canon EOS 5D Mark III · 85 mm · ƒ/1,4 · 1/160 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#463635;--ar:675/900"
+                aria-label="Agrandir : Mariée en peignoir de satin pendant les préparatifs"><img
+                  src="assets/photos/m0a0571-sm.webp" data-full="assets/photos/m0a0571.webp"
+                  alt="Mariée en peignoir de satin pendant les préparatifs" width="675" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°17</span><span>Mariages &amp;
+                    événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="2n9a9317"
+              data-exif="Canon EOS 7D Mark II · 50 mm · ƒ/3,2 · 1/400 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#565234;--ar:900/600"
+                aria-label="Agrandir : Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties"><img
+                  src="assets/photos/2n9a9317-sm.webp" data-full="assets/photos/2n9a9317.webp"
+                  alt="Famille avec deux enfants dans un jardin fleuri, en tenues wax assorties" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°18</span><span>Couples &amp; famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="2n9a8702"><button class="g-open" type="button"
+                style="--ph:#5e6663;--ar:600/900"
+                aria-label="Agrandir : Jeune homme en lunettes de soleil et veste verte, en extérieur"><img
+                  src="assets/photos/2n9a8702-sm.webp" data-full="assets/photos/2n9a8702.webp"
+                  alt="Jeune homme en lunettes de soleil et veste verte, en extérieur" width="600" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°19</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="david-banga-2"><button class="g-open" type="button"
+                style="--ph:#616063;--ar:720/900"
+                aria-label="Agrandir : Jeune homme en col roulé bleu marine assis sur un tabouret violet"><img
+                  src="assets/photos/david-banga-2-sm.webp" data-full="assets/photos/david-banga-2.webp"
+                  alt="Jeune homme en col roulé bleu marine assis sur un tabouret violet" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°20</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="sephis-shooting-portrait2195"><button class="g-open"
+                type="button" style="--ph:#453c35;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun"><img
+                  src="assets/photos/sephis-shooting-portrait2195-sm.webp"
+                  data-full="assets/photos/sephis-shooting-portrait2195.webp"
+                  alt="Portrait d&#x27;une femme bras croisés en robe à motifs verts, fond brun" width="720"
+                  height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°21</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a9591"><button class="g-open" type="button"
+                style="--ph:#4d4d4d;--ar:900/600"
+                aria-label="Agrandir : Étreinte émouvante lors d&#x27;un événement, en noir et blanc"><img
+                  src="assets/photos/2n9a9591-sm.webp" data-full="assets/photos/2n9a9591.webp"
+                  alt="Étreinte émouvante lors d&#x27;un événement, en noir et blanc" width="900" height="600"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°22</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="famille" data-slug="denise-marguerite-mane-sayana-c2"><button
+                class="g-open" type="button" style="--ph:#494040;--ar:720/900"
+                aria-label="Agrandir : Portrait de grossesse, robe blanche fluide sur fond brun"><img
+                  src="assets/photos/denise-marguerite-mane-sayana-c2-sm.webp"
+                  data-full="assets/photos/denise-marguerite-mane-sayana-c2.webp"
+                  alt="Portrait de grossesse, robe blanche fluide sur fond brun" width="720" height="900" loading="lazy"
+                  decoding="async"><span class="g-meta mono" aria-hidden="true"><span>N°23</span><span>Couples &amp;
+                    famille</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="wil02219"><button class="g-open" type="button"
+                style="--ph:#676667;--ar:675/900"
+                aria-label="Agrandir : Jeune femme riant, assise au sol en chemise lilas et jean"><img
+                  src="assets/photos/wil02219-sm.webp" data-full="assets/photos/wil02219.webp"
+                  alt="Jeune femme riant, assise au sol en chemise lilas et jean" width="675" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°24</span><span>Mode &amp; lifestyle</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="5q2a1216"><button class="g-open" type="button"
+                style="--ph:#636c6d;--ar:720/900"
+                aria-label="Agrandir : Portrait d&#x27;une femme souriante au voile turquoise à motifs"><img
+                  src="assets/photos/5q2a1216-sm.webp" data-full="assets/photos/5q2a1216.webp"
+                  alt="Portrait d&#x27;une femme souriante au voile turquoise à motifs" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°25</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="corporate" data-slug="ben-0023"><button class="g-open" type="button"
+                style="--ph:#25242f;--ar:720/900"
+                aria-label="Agrandir : Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"><img
+                  src="assets/photos/ben-0023-sm.webp" data-full="assets/photos/ben-0023.webp"
+                  alt="Portrait professionnel d&#x27;un homme en tenue bleu marine, pointant l&#x27;objectif"
+                  width="720" height="900" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°26</span><span>Portrait professionnel</span></span></button></figure>
+            <figure class="g-item" data-cat="evenements" data-slug="2n9a0120"><button class="g-open" type="button"
+                style="--ph:#6c4f51;--ar:600/900"
+                aria-label="Agrandir : Femme en robe de soirée bordeaux brodée, devant des rideaux clairs"><img
+                  src="assets/photos/2n9a0120-sm.webp" data-full="assets/photos/2n9a0120.webp"
+                  alt="Femme en robe de soirée bordeaux brodée, devant des rideaux clairs" width="600" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°27</span><span>Mariages &amp; événements</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="daniel-banam0537"
+              data-exif="Canon EOS 5D Mark IV · 50 mm · ƒ/5 · 1/500 s · ISO 100"><button class="g-open" type="button"
+                style="--ph:#6e6e6e;--ar:900/600"
+                aria-label="Agrandir : Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio"><img
+                  src="assets/photos/daniel-banam0537-sm.webp" data-full="assets/photos/daniel-banam0537.webp"
+                  alt="Portrait noir et blanc d&#x27;un jeune homme les yeux fermés, casque audio" width="900"
+                  height="600" loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°28</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="studio" data-slug="miss-mister-bde0542"><button class="g-open"
+                type="button" style="--ph:#312a29;--ar:720/900"
+                aria-label="Agrandir : Jeune homme souriant, pull vert noué sur les épaules, fond brun"><img
+                  src="assets/photos/miss-mister-bde0542-sm.webp" data-full="assets/photos/miss-mister-bde0542.webp"
+                  alt="Jeune homme souriant, pull vert noué sur les épaules, fond brun" width="720" height="900"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°29</span><span>Portrait studio</span></span></button></figure>
+            <figure class="g-item" data-cat="mode" data-slug="wil02284"><button class="g-open" type="button"
+                style="--ph:#605c5c;--ar:900/675"
+                aria-label="Agrandir : Groupe d&#x27;amies complices allongées en studio, fond gris"><img
+                  src="assets/photos/wil02284-sm.webp" data-full="assets/photos/wil02284.webp"
+                  alt="Groupe d&#x27;amies complices allongées en studio, fond gris" width="900" height="675"
+                  loading="lazy" decoding="async"><span class="g-meta mono"
+                  aria-hidden="true"><span>N°30</span><span>Mode &amp; lifestyle</span></span></button></figure>
           </div>
         </div>
-        <div class="book-info">
-          <span class="mono">PDF · Google Drive</span>
-          <h3>Portfolio officiel</h3>
-          <p>Le book de référence : portraits, studio, corporate et événements.</p>
-          <a class="btn btn-" href="https://drive.google.com/file/d/1NK169NUXUy979qw4C9okyolPZr9rO0Qm/view?usp=sharing" target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+
+        <div class="g-foot mono">
+          <span id="gStatus" aria-live="polite">30 images affichées</span>
+          <a href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-cursor="link">Plus de projets
+            sur Behance ↗</a>
         </div>
-      </article>
-      <article class="book rv">
-        <div class="cover-wrap">
-          <div class="cover cover-b" aria-hidden="true">
-            <div class="c-top"><span>E-book</span><span>Vol. 02</span></div>
-            <div class="c-title">Hôtellerie <em>&amp; gastronomie</em></div>
-            <div class="c-bot"><span>Reportages<br>institutionnels</span><span>David Banga</span></div>
+      </div>
+    </section>
+
+    <!-- ═════════ QUOTE ═════════ -->
+    <section class="quote" aria-label="Citation">
+      <div class="wrap">
+        <blockquote>
+          <p class="q-text" id="qText">Chaque photo raconte une histoire <span class="hl">unique.</span></p>
+          <cite class="q-cite mono">— David Banga</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ═════════ À PROPOS ═════════ -->
+    <section class="sec sec-about" id="a-propos" aria-labelledby="t-about">
+      <div class="wrap about-grid">
+        <div class="sheet rv" aria-label="Portrait de David Banga">
+          <div class="sheet-edge mono"><span>DB Studio ▸ 400</span><span>Planche contact</span></div>
+          <div class="sheet-grid sheet-solo">
+            <figure class="sel">
+              <div class="fr" style="--ph:#616063"><img src="assets/photos/david-banga-2-sm.webp"
+                  alt="Portrait de David Banga, col roulé bleu marine, assis sur un tabouret violet" loading="lazy"
+                  width="720" height="900"></div>
+              <figcaption><span>01</span><span>▸ 01A</span></figcaption>
+            </figure>
+          </div>
+          <div class="sheet-note mono"><span>Sélection au crayon gras</span><span>Retouche ✓</span></div>
+        </div>
+
+        <div class="about-body">
+          <p class="eyebrow mono">À propos</p>
+          <h2 class="h2" id="t-about">David <span class="serif-i">Banga</span></h2>
+          <p class="about-lead">Huit années derrière l'objectif, avec un sens du détail au service de <em>moments
+              authentiques et spontanés.</em></p>
+          <div class="about-text">
+            <p>Photographe professionnel, David découvre la photographie dès ses premières années universitaires. Au fil
+              des années, il perfectionne son art grâce à de nombreuses collaborations enrichissantes et à des
+              formations auprès de certains devanciers.</p>
+            <p>Il est convaincu que chaque photo raconte une histoire unique. Son objectif cherche donc à refléter la
+              personnalité et les émotions de chacun de ses sujets.</p>
+            <p>Son équipement professionnel, avec des objectifs variés, lui permet de s'adapter à toutes les conditions
+              de prise de vue. Adepte de la retouche numérique, il sublime ses clichés tout en restant réaliste et
+              conservateur.</p>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt class="mono">Métier</dt>
+              <dd>Photographe · Infographe</dd>
+            </div>
+            <div>
+              <dt class="mono">Expérience</dt>
+              <dd>8 ans</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ SERVICES ═════════ -->
+    <section class="sec services" id="services" aria-labelledby="t-svc">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Services</p>
+            <h2 class="h2" id="t-svc">Une gamme <span class="serif-i ">complète.</span></h2>
+          </div>
+          <p class="sec-lead">Du studio au terrain, chaque prestation est pensée pour raconter votre histoire avec
+            justesse.</p>
+        </div>
+        <div class="svc-grid">
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="13" rx="2" />
+                <circle cx="12" cy="12.5" r="3.6" />
+                <path d="M8 6l1.5-2h5L16 6" />
+              </svg></span>
+            <h3>Séances photo en studio</h3>
+            <p>Portraits individuels, couples, familles et maternité. Lumière et fond maîtrisés pour un rendu soigné.
+            </p>
+            <div class="tags"><span>Portrait</span><span>Couple</span><span>Maternité</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c1.2-4.2 4.3-6 8-6s6.8 1.8 8 6" />
+              </svg></span>
+            <h3>Portraits professionnels</h3>
+            <p>Photos corporate pour dirigeants, équipes et profils en ligne. Une image juste, à votre image.</p>
+            <div class="tags"><span>Corporate</span><span>Profil</span><span>Équipe</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M4 21V8l8-5 8 5v13" />
+                <path d="M9 21v-6h6v6" />
+                <path d="M4 21h16" />
+              </svg></span>
+            <h3>Reportages institutionnels</h3>
+            <p>Couverture d'entreprises, d'institutions, d'hôtels et de restaurants pour vos supports de communication.
+            </p>
+            <div class="tags"><span>Entreprise</span><span>Hôtellerie</span><span>Gastronomie</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" />
+              </svg></span>
+            <h3>Reportages événementiels</h3>
+            <p>Mariages, cérémonies, soirées et événements d'entreprise. Les instants forts, sans mise en scène.</p>
+            <div class="tags"><span>Mariage</span><span>Cérémonie</span><span>Gala</span></div>
+          </article>
+          <article class="svc">
+            <span class="svc-ico vf" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M4 20l4-1 11-11-3-3L5 16z" />
+                <path d="M14 6l3 3" />
+              </svg></span>
+            <h3>Retouche &amp; infographie</h3>
+            <p>Retouche numérique réaliste et conservatrice, et création de supports graphiques pour prolonger vos
+              images.</p>
+            <div class="tags"><span>Retouche</span><span>Infographie</span></div>
+          </article>
+          <a class="svc svc-cta"
+            href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+            target="_blank" rel="noopener" data-cursor="link">
+            <h3>Et bien plus <em>encore.</em></h3>
+            <p>Un besoin particulier ? Décrivez votre projet sur WhatsApp et recevez une proposition adaptée.</p>
+            <span class="go">Écrire sur WhatsApp <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ PORTFOLIOS PDF ═════════ -->
+    <section class="sec" id="portfolios" aria-labelledby="t-books">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div>
+            <p class="eyebrow mono">Portfolios PDF</p>
+            <h2 class="h2" id="t-books">À feuilleter <span class="serif-i ">en entier.</span></h2>
+          </div>
+          <p class="sec-lead">Deux e-books à consulter en ligne ou à partager avec votre équipe.</p>
+        </div>
+        <div class="books">
+          <article class="book rv">
+            <div class="cover-wrap">
+              <div class="cover cover-a" aria-hidden="true">
+                <img class="c-photo" src="assets/photos/ben-0023-sm.webp" alt="" loading="lazy">
+                <div class="c-top"><span>E-book</span><span>Vol. 01</span></div>
+                <div class="c-title">Portfolio <em>officiel</em></div>
+                <div class="c-bot"><img class="c-mono" src="assets/logo/monogram-dark.png" alt=""><span>David
+                    Banga</span></div>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="mono">PDF · Google Drive</span>
+              <h3>Portfolio officiel</h3>
+              <p>Le book de référence : portraits, studio, corporate et événements.</p>
+              <a class="btn btn-"
+                href="https://drive.google.com/file/d/1NK169NUXUy979qw4C9okyolPZr9rO0Qm/view?usp=sharing"
+                target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+            </div>
+          </article>
+          <article class="book rv">
+            <div class="cover-wrap">
+              <div class="cover cover-b" aria-hidden="true">
+                <div class="c-top"><span>E-book</span><span>Vol. 02</span></div>
+                <div class="c-title">Hôtellerie <em>&amp; gastronomie</em></div>
+                <div class="c-bot"><span>Reportages<br>institutionnels</span><span>David Banga</span></div>
+              </div>
+            </div>
+            <div class="book-info">
+              <span class="mono">PDF · Google Drive</span>
+              <h3>Hôtellerie &amp; gastronomie</h3>
+              <p>Établissements, ambiances et plats mis en valeur pour l'hôtellerie et la restauration.</p>
+              <a class="btn btn-"
+                href="https://drive.google.com/file/d/1hqhsBW-v3215j9sXjhWreCY2-exIy9ZD/view?usp=sharing"
+                target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ═════════ MARQUEE ═════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track">
+      <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i
+          class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i
+          class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i
+          class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
+      <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i
+          class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i
+          class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i
+          class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
+    </div>
+  </div>
+  <!-- ═════════ CONTACT ═════════ -->
+  <footer class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap">
+      <div class="c-grid">
+        <div>
+          <div class="c-line">
+            <span class="mono">E-mail</span>
+            <a class="c-value" href="mailto:davidbanga@outlook.fr" data-cursor="link">davidbanga@outlook.fr</a>
+            <button class="copy" type="button" data-copy="davidbanga@outlook.fr">Copier</button>
+          </div>
+          <div class="c-line">
+            <span class="mono">WhatsApp Business</span>
+            <a class="c-value"
+              href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+              target="_blank" rel="noopener" data-cursor="link">+221 77 733 00 57</a>
+            <button class="copy" type="button" data-copy="+221777330057">Copier</button>
           </div>
         </div>
-        <div class="book-info">
-          <span class="mono">PDF · Google Drive</span>
-          <h3>Hôtellerie &amp; gastronomie</h3>
-          <p>Établissements, ambiances et plats mis en valeur pour l'hôtellerie et la restauration.</p>
-          <a class="btn btn-" href="https://drive.google.com/file/d/1hqhsBW-v3215j9sXjhWreCY2-exIy9ZD/view?usp=sharing" target="_blank" rel="noopener" data-cursor="link">Ouvrir le PDF <span class="arr">↗</span></a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-</main>
-<!-- ═════════ MARQUEE ═════════ -->
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track">
-    <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
-    <div class="mq-group"><span>Portrait</span><i class="mk"></i><span>Studio</span><i class="mk"></i><span>Corporate</span><i class="mk"></i><span>Mariage</span><i class="mk"></i><span>Événementiel</span><i class="mk"></i><span>Maternité</span><i class="mk"></i><span>Mode</span><i class="mk"></i><span>Retouche</span><i class="mk"></i></div>
-  </div>
-</div>
-<!-- ═════════ CONTACT ═════════ -->
-<footer class="contact" id="contact" aria-labelledby="t-contact">
-  <div class="wrap">
-    <div class="c-grid">
-      <div>
-        <div class="c-line">
-          <span class="mono">E-mail</span>
-          <a class="c-value" href="mailto:davidbanga@outlook.fr" data-cursor="link">davidbanga@outlook.fr</a>
-          <button class="copy" type="button" data-copy="davidbanga@outlook.fr">Copier</button>
-        </div>
-        <div class="c-line">
-          <span class="mono">WhatsApp Business</span>
-          <a class="c-value" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-cursor="link">+221 77 733 00 57</a>
-          <button class="copy" type="button" data-copy="+221777330057">Copier</button>
+        <div>
+          <div class="barrels">
+            <a class="barrel"
+              href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+              target="_blank" rel="noopener" data-label="WhatsApp">WhatsApp</a>
+            <a class="barrel" href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener"
+              data-label="Instagram">Instagram</a>
+            <a class="barrel" href="https://www.behance.net/bangadavid" target="_blank" rel="noopener"
+              data-label="Behance">Behance</a>
+            <a class="barrel" href="mailto:davidbanga@outlook.fr" data-label="E-mail">E-mail</a>
+          </div>
+          <dl class="c-meta">
+            <div>
+              <dt class="mono">Pays</dt>
+              <dd>Dakar, Sénégal</dd>
+            </div>
+            <div>
+              <dt class="mono">Heure à Dakar</dt>
+              <dd id="clock">GMT+0</dd>
+            </div>
+            <div>
+              <dt class="mono">Studio</dt>
+              <dd>Ouakam citée Batrain</dd>
+            </div>
+            <div>
+              <dt class="mono">Instagram</dt>
+              <dd>@davidbanga_studio</dd>
+            </div>
+          </dl>
         </div>
       </div>
-      <div>
-        <div class="barrels">
-          <a class="barrel" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" data-label="WhatsApp">WhatsApp</a>
-          <a class="barrel" href="https://www.instagram.com/davidbanga_studio/" target="_blank" rel="noopener" data-label="Instagram">Instagram</a>
-          <a class="barrel" href="https://www.behance.net/bangadavid" target="_blank" rel="noopener" data-label="Behance">Behance</a>
-          <a class="barrel" href="mailto:davidbanga@outlook.fr" data-label="E-mail">E-mail</a>
-        </div>
-        <dl class="c-meta">
-          <div><dt class="mono">Pays</dt><dd>Dakar, Sénégal</dd></div>
-          <div><dt class="mono">Heure à Dakar</dt><dd id="clock">GMT+0</dd></div>
-          <div><dt class="mono">Studio</dt><dd>Ouakam citée Batrain</dd></div>
-          <div><dt class="mono">Instagram</dt><dd>@davidbanga_studio</dd></div>
-        </dl>
+
+      <div class="sign"><img src="assets/logo/logo-blanc.svg" alt="David Banga Studio" width="1405" height="310"
+          loading="lazy"></div>
+      <div class="legal mono">
+        <span>© <span id="year">2026</span> David Banga Studio. Tous droits réservés.</span>
+        <span>Toutes les photographies © David Banga</span>
+        <a href="#accueil">Haut de page ↑</a>
       </div>
     </div>
+  </footer>
 
-    <div class="sign"><img src="assets/logo/logo-blanc.svg" alt="David Banga Studio" width="1405" height="310" loading="lazy"></div>
-    <div class="legal mono">
-      <span>© <span id="year">2026</span> David Banga Studio. Tous droits réservés.</span>
-      <span>Toutes les photographies © David Banga</span>
-      <a href="#accueil">Haut de page ↑</a>
+  <a class="fab" id="fab"
+    href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo."
+    target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp : +221 77 733 00 57">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.6z" />
+      <path d="M9 8.6c.3 2.9 2.6 5.5 5.6 6l1-1.4-1.9-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-1.9z" />
+    </svg>
+    <span class="fab-txt">WhatsApp</span>
+  </a>
+
+  <div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekImg"></div>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse photo" hidden>
+    <div class="lb-top">
+      <span class="mono"><span class="lb-count" id="lbCount">01 / 30</span> &nbsp;·&nbsp; <span
+          id="lbCat"></span></span>
+      <button class="lb-close mono" id="lbClose" type="button">Fermer <span aria-hidden="true">✕</span></button>
+    </div>
+    <figure class="lb-stage" id="lbStage">
+      <img class="lb-img" id="lbImg" alt="">
+      <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Image précédente">←</button>
+      <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Image suivante">→</button>
+    </figure>
+    <div class="lb-bot">
+      <p class="lb-cap" id="lbCap"></p>
+      <span class="lb-exif mono" id="lbExif"></span>
     </div>
   </div>
-</footer>
 
-<a class="fab" id="fab" href="https://wa.me/221777330057?text=Bonjour%20David%2C%20je%20souhaite%20r%C3%A9server%20une%20s%C3%A9ance%20photo." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp : +221 77 733 00 57">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.6z"/><path d="M9 8.6c.3 2.9 2.6 5.5 5.6 6l1-1.4-1.9-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-1.9z"/></svg>
-  <span class="fab-txt">WhatsApp</span>
-</a>
-
-<div class="peek" id="peek" aria-hidden="true"><img alt="" id="peekImg"></div>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse photo" hidden>
-  <div class="lb-top">
-    <span class="mono"><span class="lb-count" id="lbCount">01 / 30</span> &nbsp;·&nbsp; <span id="lbCat"></span></span>
-    <button class="lb-close mono" id="lbClose" type="button">Fermer <span aria-hidden="true">✕</span></button>
-  </div>
-  <figure class="lb-stage" id="lbStage">
-    <img class="lb-img" id="lbImg" alt="">
-    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Image précédente">←</button>
-    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Image suivante">→</button>
-  </figure>
-  <div class="lb-bot">
-    <p class="lb-cap" id="lbCap"></p>
-    <span class="lb-exif mono" id="lbExif"></span>
-  </div>
-</div>
-
-<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot" id="cDot"></span><span class="cursor-ring" id="cRing"><span class="cursor-label" id="cLabel">Voir</span></span></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot" id="cDot"></span><span class="cursor-ring"
+      id="cRing"><span class="cursor-label" id="cLabel">Voir</span></span></div>
 </body>
+
 </html>
