@@ -709,7 +709,7 @@ button {
 
 /* ───────── sections ───────── */
 .sec {
-  padding-block: clamp(80px, 10vw, 150px);
+  padding-block: clamp(40px, 10vw, 40px);
   position: relative;
 }
 .sec-about {
@@ -1022,14 +1022,10 @@ button {
   margin: 0;
 }
 .q-text {
-  font-family: var(--f-serif);
   font-weight: 250;
-  font-style: italic;
-  font-size: clamp(44px, 8.6vw, 150px);
+  font-size: clamp(44px, 8.6vw, 80px);
   line-height: 0.98;
-  letter-spacing: -0.035em;
   margin: 0 auto;
-  max-width: 13ch;
   text-wrap: balance;
 }
 .q-text .w {
