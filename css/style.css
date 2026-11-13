@@ -1318,8 +1318,6 @@ button {
   gap: clamp(20px, 3vw, 44px);
   align-items: center;
   padding: clamp(20px, 2.6vw, 36px);
-  
-  background: var(--bg-2);
   transition: border-color 0.4s;
   min-width: 0;
 }
