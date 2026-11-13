@@ -420,10 +420,14 @@ button {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  font-weight: 800;
+  font-weight: 300;
   font-size: clamp(40px, 11vw, 64px);
   letter-spacing: -0.04em;
   line-height: 1.05;
+}
+
+.mnav ol a:hover {
+  color: var(--accent);
 }
 .mnav ol a small {
   font-family: var(--f-mono);
