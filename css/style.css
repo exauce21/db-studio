@@ -713,7 +713,7 @@ button {
   position: relative;
 }
 .sec-about {
-  padding-top: 0;
+  padding-block: clamp(72px, 10vw, 140px);
 }
 .sec-head {
   display: grid;
@@ -1054,15 +1054,30 @@ button {
   align-items: start;
 }
 .sheet {
-  background: var(--bg-2);
-  padding: clamp(14px, 1.8vw, 24px);
   position: relative;
-  
+}
+.sec-about .about-grid {
+  align-items: stretch;
+}
+.sheet .fr {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--ph, var(--bg-3));
+}
+.sheet .fr img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  transform: scale(1.15);
+  transform-origin: 50% 30%;
 }
 .sheet-edge {
   display: flex;
   justify-content: space-between;
-  color: var(--accent);
+  color: var(--paper);
   font-size: 10px;
   margin-bottom: 12px;
 }
@@ -1112,7 +1127,6 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 0 2px var(--accent);
 }
 .grease {
   position: absolute;
@@ -1138,20 +1152,16 @@ button {
   margin-bottom: clamp(24px, 3vw, 40px);
 }
 .about-lead {
-  font-family: var(--f-serif);
   font-weight: 300;
-  font-size: clamp(24px, 2.6vw, 36px);
+  font-size: clamp(14px, 2.6vw, 29px);
   line-height: 1.22;
-  letter-spacing: -0.015em;
   margin: 0 0 28px;
   text-wrap: pretty;
 }
 .about-lead em {
   color: var(--accent);
 }
-.about-body p {
-  max-width: 62ch;
-}
+
 .about-text {
   display: grid;
   gap: 16px;
@@ -1871,6 +1881,10 @@ a.c-value:hover {
   }
   .sheet {
     max-width: 620px;
+  }
+  .sheet .fr {
+    position: relative;
+    aspect-ratio: 1/1;
   }
   .c-grid {
     grid-template-columns: minmax(0, 1fr);
